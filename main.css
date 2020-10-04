@@ -47,7 +47,7 @@ body{
 
 .top_nav_hidden{
   display: none;
-  padding: 20px 20px;
+  padding: 0px 0px;
   width: 10vh;
   position: fixed;
   top: 20vh;
@@ -58,7 +58,7 @@ body{
 
 .top_nav_hidden div{
   color: #ebeced;
-  padding: 20px 20px;
+  padding: 10px 5px;
 }
 
 .top_nav_hidden div:hover {
