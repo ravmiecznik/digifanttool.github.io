@@ -165,7 +165,7 @@ function checkScroll() {
     if (window.scrollY > 300) {
       //ocument.getElementById("hidden_bar").style.display = "block";
       document.getElementById("hidden_bar").style.left = "0";
-      
+      setTimeout(function() {document.getElementById("hidden_bar").style.left = "-200px";}, 5000);
     }
     else {
       //document.getElementById("hidden_bar").style.display = "none";
