@@ -47,7 +47,7 @@ body{
 
 .top_nav_hidden{
   display: none;
-  padding: 10px 10px;
+  padding: 20px 20px;
   width: 10vh;
   position: fixed;
   top: 20vh;
