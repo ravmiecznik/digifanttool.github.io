@@ -196,6 +196,7 @@ img {
   margin-top: 5%;
   margin-left: 10%;
   border: 1px solid;
+  box-shadow: 10px 10px 10px 10px black;
 }
 
 /*.link a:link { color: blue; font-family: 'Trocchi'; font-size: 28px; line-height: 30px; text-align: left; margin: auto; display: list-item;list-style-type: disc; margin-left: 5%; margin-top: 0px;}*/
