@@ -91,8 +91,9 @@ body{
   display: block;
   /*padding: 0px 0px;*/
   width: 5vw;
+  /*max-height: 3vh;*/
   position: fixed;
-  top: 50vh;
+  bottom: 5vh;
   /*left: -40px;*/
   /*transition: top 3s;*/
   /*background-color: #330055;*/
