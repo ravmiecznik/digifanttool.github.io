@@ -125,20 +125,21 @@ background: radial-gradient(circle, rgba(242,238,244,1) 0%, rgba(249,249,249,0.4
 /*  color: black;*/
 /*}*/
 
+
+
 .topnav {
   display: block;
   float: left;
-  overflow: hidden;
   background-color: #330055;
-  height: 0.1vh;
-  /*padding: 30px 20px;*/
+  height: 5vh;
+  padding: 50px 1px 1px 1px;
   width: 100%;
 }
 
 .topnav a {
   color: #ebeced;
   text-align: center;
-  padding: 20px 10px;
+  padding: 20px 20px 20px 20px;
   text-decoration: none;
   font-size: 2vh;
 }
