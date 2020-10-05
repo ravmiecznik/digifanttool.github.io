@@ -102,7 +102,9 @@ background: radial-gradient(circle, rgba(242,238,244,1) 0%, rgba(249,249,249,0.4
   margin-left: 0;
   display: block;
   /*padding: 0px 0px;*/
+  transform: scale(0.8);
   width: 5vw;
+  max-height:  40vh;
   /*max-height: 3vh;*/
   position: fixed;
   bottom: 5vh;
