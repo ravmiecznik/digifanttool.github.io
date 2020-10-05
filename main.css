@@ -108,8 +108,9 @@ background: radial-gradient(circle, rgba(242,238,244,1) 0%, rgba(249,249,249,0.4
   bottom: 5vh;
   /*left: -40px;*/
   /*transition: top 3s;*/
-  /*background-color: #330055;*/
   transition: left 0.3s;
+background: rgb(131,58,180);
+background: linear-gradient(351deg, rgba(131,58,180,0.23573179271708689) 0%, rgba(164,29,253,0.227328431372549) 50%, rgba(180,181,255,0.04805672268907568) 100%);
 }
 
 /*.top_nav_hidden div{*/
@@ -132,7 +133,7 @@ background: radial-gradient(circle, rgba(242,238,244,1) 0%, rgba(249,249,249,0.4
   overflow: hidden;
   background-color: #330055;
   height: 0.1vh;
-  padding: 30px 20px;
+  /*padding: 30px 20px;*/
   width: 100%;
 }
 
