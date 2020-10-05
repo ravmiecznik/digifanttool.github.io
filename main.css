@@ -90,7 +90,7 @@ background: radial-gradient(circle, rgba(242,238,244,1) 0%, rgba(249,249,249,0.4
 }
 
 .square img:hover {
-    transform: scale(2.3);
+    transform: scale(1.5);
     -webkit-transition-duration: 0.5s;
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
