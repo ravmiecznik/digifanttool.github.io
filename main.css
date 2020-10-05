@@ -59,6 +59,25 @@ body{
   width: 2.5vw;
   /*padding-right: 20px;*/
   margin: 5%;
+
+}
+
+.contact_link_left {
+  /*float: left;*/
+  height: 3.8vw;
+  width: 3.8vw;
+  /*padding-right: 20px;*/
+  margin: 5%;
+
+}
+
+.contact_link:hover {
+  transform: scale(1.5);
+        -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+     z-index: 3;
 }
 
 .top_nav_desc{
@@ -68,29 +87,31 @@ body{
 }
 
 .top_nav_hidden{
-  display: none;
-  padding: 0px 0px;
-  width: 5%;
-  /*position: fixed;*/
-  top: 20vh;
-  transition: top 3s;
-  background-color: #330055;
+  margin-left: 0;
+  display: block;
+  /*padding: 0px 0px;*/
+  width: 5vw;
+  position: fixed;
+  top: 50vh;
+  /*left: -40px;*/
+  /*transition: top 3s;*/
+  /*background-color: #330055;*/
   transition: left 0.3s;
 }
 
-.top_nav_hidden div{
-  color: #ebeced;
-  padding: 10px 5px;
-}
+/*.top_nav_hidden div{*/
+/*  color: #ebeced;*/
+/*  padding: 10px 5px;*/
+/*}*/
 
-.top_nav_hidden a{
-  width: 80%;
-}
+/*.top_nav_hidden a{*/
+/*  width: 80%;*/
+/*}*/
 
-.top_nav_hidden div:hover {
-  background-color: #ddd;
-  color: black;
-}
+/*.top_nav_hidden div:hover {*/
+/*  background-color: #ddd;*/
+/*  color: black;*/
+/*}*/
 
 .topnav {
   display: table-cell;
