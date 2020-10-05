@@ -248,6 +248,8 @@ img {
   box-shadow: 1px 1px 1px 1px black;
 }
 
+
+
 /*.link a:link { color: blue; font-family: 'Trocchi'; font-size: 28px; line-height: 30px; text-align: left; margin: auto; display: list-item;list-style-type: disc; margin-left: 5%; margin-top: 0px;}*/
 .link a:link { color: #3562ab; font-family: 'Raleway',sans-serif; font-size: 25px; font-weight: 600; line-height: 25px; text-align: left; margin: auto; display: list-item;list-style-type: disc; margin-left: 5%; margin-top: 0px;}
 .link a:visited {color: #152e57; font-family: font-family: 'Raleway',sans-serif; font-size: 26px; line-height: 25px; text-align: left; margin: auto; display: list-item;list-style-type: disc; margin-left: 5%; margin-top: 0px;}
