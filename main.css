@@ -71,7 +71,7 @@ body{
   display: none;
   padding: 0px 0px;
   width: 5%;
-  position: fixed;
+  /*position: fixed;*/
   top: 20vh;
   transition: top 3s;
   background-color: #330055;
