@@ -234,7 +234,7 @@ a:hover { color: #ffcc66 }
 h1 { color: black; font-family: 'Enriqueta', arial, serif; line-height: 1.25; font-size: 2vw; font-weight: 1000; line-height: 72px; margin: 5% 5% 14px; margin-top: 1%; text-align: left; text-transform: uppercase; }
 
 
-h2 { color: black; font-family: 'Raleway',sans-serif; font-size: 1.5vw; font-weight: 800; line-height: 36px; margin: 0 0 24px; margin-left: 20px; width: 80%;text-align: justify; }
+h2 { color: black; font-family: 'Raleway',sans-serif; font-size: 1.5vw; font-weight: 800; line-height: 2vh; margin: 0 0 1.5vh; margin-left: 20px; width: 80%;text-align: justify; }
 
 
 p { color: #333333; font-family: "Helvetica Neue",Arial,sans-serif; font-size: 16px; font-weight: 300; line-height: 1.5625; margin-bottom: 15px; margin: 2% 10% 2% 2%; text-align: justify;}
