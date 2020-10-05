@@ -40,70 +40,84 @@
   </div>
   <div class="top_bar">
       <img class="banner" src="resources/banner.png" alt="main_banner">
-      <img class="banner slide_in" id="carousel" src="resources/carousel_slides/s1.jpg">
   </div>
   
-  <div class="text">
-    <h1 id="about">ABOUT</h1>
-    <h2>
-      I have a lot of questions to describe what this tool actually is so below is short description of Digitool and emulator device:
-    </h2>
-    <div class="square"> 
-      <!--<img src="resources/emubt.svg">-->
-      <img src="resources/carousel_slides/knock_history.jpg" style="width:50%;">
+  <div id="streams">
+    <div id="left_stream">
+      <div class="text">
+      <h1 id="about">ABOUT</h1>
+      <h2>
+        I have a lot of questions to describe what this tool actually is so below is short description of Digitool and emulator device:
+      </h2>
+      <div class="square"> 
+        <!--<img src="resources/emubt.svg">-->
+        <img src="resources/carousel_slides/knock_history.jpg" style="width:15vw; float: left; margin: 15px;">
+      </div>
+      <p>
+        This modification works only with Digifant1 injection system, so if you deal with MK2, Passat or Corrado equipped with Digifant 1
+        this tool will significantly improve tuning and problems tracking with the injection system. Digifant 1 originally was installed in G60
+        versions but there is also a very popular modification for 16V engines, you swap the injection and get rid of old K-Jetronic/Ke-Jetronic.
+        This tool will work with 16V modified version too. So basically to enable feedback from ECU you need to attach a piece of my code into original
+        Digifant 1 code, so far it works with single iginiton map version, but I have plan to adapt it to 3 map version, but I want to refactor
+        my emulator code first. So I can provide you a modified binary (eeprom image) and a small device which you will connect to MIL cable and with
+        USB cable to PC. You also need a TunerPro with my definition files for maps modification and definition file to decode serial data from Digifant itself.
+        If you have it you are able to track ECU data in real time, you get about 10 data frames per second which includes:
+        current RPM, MAP, ECT, IAT, knock voltage per cylinder, KNOCK flag, applied additional retard which is a clue that your ignition or fuel maps should
+        be corrected at this point, calculated injection time for given revolution, NB02 reading, you can connect WBO2 output instead of COPOT and track WBO2
+        reading as well. If you are going to modify the program you can disable COPOT potentiometer and set it from software, I do it like that and connect WBO2
+        driver output to COPOT pin. There is a lot more data but those are most significant ones. I will post somewhere here a link to my adx file so you can check
+        what kind of data you can get. Another tool which I am refactoring at the moment is this BT emulator. If you have it you don't need this small adapter,
+        no drivers are needed and cables. It sends the feedback data from ECU to TunerPro over Bluetooth and is also capable to emulate EEPROM chip, it also works
+        without PC so basically you can replace your old chip with this device and apply changes to emulated chip at any time without a programmer and there is
+        no need to open the ECU anymore if you want to change something in your maps or program itself.
+      </p>
+      
     </div>
-    <p>
-      This modification works only with Digifant1 injection system, so if you deal with MK2, Passat or Corrado equipped with Digifant 1
-      this tool will significantly improve tuning and problems tracking with the injection system. Digifant 1 originally was installed in G60
-      versions but there is also a very popular modification for 16V engines, you swap the injection and get rid of old K-Jetronic/Ke-Jetronic.
-      This tool will work with 16V modified version too. So basically to enable feedback from ECU you need to attach a piece of my code into original
-      Digifant 1 code, so far it works with single iginiton map version, but I have plan to adapt it to 3 map version, but I want to refactor
-      my emulator code first. So I can provide you a modified binary (eeprom image) and a small device which you will connect to MIL cable and with
-      USB cable to PC. You also need a TunerPro with my definition files for maps modification and definition file to decode serial data from Digifant itself.
-      If you have it you are able to track ECU data in real time, you get about 10 data frames per second which includes:
-      current RPM, MAP, ECT, IAT, knock voltage per cylinder, KNOCK flag, applied additional retard which is a clue that your ignition or fuel maps should
-      be corrected at this point, calculated injection time for given revolution, NB02 reading, you can connect WBO2 output instead of COPOT and track WBO2
-      reading as well. If you are going to modify the program you can disable COPOT potentiometer and set it from software, I do it like that and connect WBO2
-      driver output to COPOT pin. There is a lot more data but those are most significant ones. I will post somewhere here a link to my adx file so you can check
-      what kind of data you can get. Another tool which I am refactoring at the moment is this BT emulator. If you have it you don't need this small adapter,
-      no drivers are needed and cables. It sends the feedback data from ECU to TunerPro over Bluetooth and is also capable to emulate EEPROM chip, it also works
-      without PC so basically you can replace your old chip with this device and apply changes to emulated chip at any time without a programmer and there is
-      no need to open the ECU anymore if you want to change something in your maps or program itself.
-    </p>
+    <div class="text">
+        <h1 id="links">LINKS</h1>
+        <p class="link"><a href="https://www.youtube.com/channel/UCf1aKdZV842va2j9UnfraSQ?view_as=subscriber/">youtube</a></p>
+        <p class="link"><a href="https://www.facebook.com/tuningtool/">facebook</a></p>
+        <p class="link"><a href="https://github.com/ravmiecznik/emub_bt_r/releases">GIT</a></p>
+      </div>
     
-    <h1 id="demos">DEMOS</h1>
-    <iframe class="demo_window" width="560" height="315" src="https://www.youtube.com/embed/b4Lb02Id1Gc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe class="demo_window" width="560" height="315" src="https://www.youtube.com/embed/xq7Y-FIqNp0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe class="demo_window" width="560" height="315" src="https://www.youtube.com/embed/VVEnGDDLKik" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <h1 id="ordering">ORDERING</h1>
-    <p>
-    To order the board you can contact me with:
-    </p>
-    <p class="p_list">email</p>
-    <p class="p_list">facebook messenger</p>
-    <p class="p_list">whatsapp</p>
-    <p>
-    The board price is 100EUR + 10EUR shipping worldwide.
-    Payment with PayPal, revolut or regular bank transfer
-    </p>
+    </div>    
+        
+    <div id="right_stream">
+      <!--<div class="text">-->
+      <!--  <img class="slide_in" id="carousel" src="resources/carousel_slides/s1.jpg">-->
+      <!--</div>-->
+      
+      <div class="contact_view text">
+        <h1 id="contact" style="font-size: 1.5vw;">CONTACT  
+        <a title="messenger" href="https://m.me/tuningtool" ><img class="contact_link" src="resources/messenger.png"></a>
+        <a title="ravmiecznk@gmail.com" href="mailto:ravmiecznik@gmail.com"><img class="contact_link" src="resources/email.png"></a>
+        <a title="ravmiecznk@gmail.com" href="mailto:ravmiecznik@gmail.com" style="font-size: 20px; color: black;">ravmiecznk@gmail.com</a>
+        </h1>
+      </div>
     
-    
-    
-    <h1 id="links">LINKS</h1>
-    <p class="link"><a href="https://www.youtube.com/channel/UCf1aKdZV842va2j9UnfraSQ?view_as=subscriber/">youtube</a></p>
-    <p class="link"><a href="https://www.facebook.com/tuningtool/">facebook</a></p>
-    <p class="link"><a href="https://github.com/ravmiecznik/emub_bt_r/releases">GIT</a></p>
-    
-    
-    
-    <div class="contact_view">
-      <h1 id="contact">CONTACT</h1>
-      <a title="messenger" href="https://m.me/tuningtool" ><img class="contact_link" src="resources/messenger.png"></a>
-      <a title="ravmiecznk@gmail.com" href="mailto:ravmiecznik@gmail.com"><img class="contact_link" src="resources/email.png"></a>
+    <div class="text">
+      <h1 id="demos">DEMOS</h1>
+      <iframe class="demo_window" width="560" height="315" src="https://www.youtube.com/embed/b4Lb02Id1Gc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="demo_window" width="560" height="315" src="https://www.youtube.com/embed/xq7Y-FIqNp0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="demo_window" width="560" height="315" src="https://www.youtube.com/embed/VVEnGDDLKik" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    
-  </div>
+      
+      <div class="text">
+        <h1 id="ordering">ORDERING</h1>
+          <p>
+          To order the board you can contact me with:
+          </p>
+          <p class="p_list">email</p>
+          <p class="p_list">facebook messenger</p>
+          <p class="p_list">whatsapp</p>
+          <p>
+          The board price is 100EUR + 10EUR shipping worldwide.
+          Payment with PayPal, revolut or regular bank transfer
+        </p>
+      </div>
+    </div>>
   
+  </div>
   <div class="footer">© 2020 Rafal Miecznik
     <a href="mailto:ravmiecznik@gmail.com"> ravmiecznk@gmail.com</a>
   </div>
