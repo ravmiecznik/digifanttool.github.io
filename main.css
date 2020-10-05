@@ -64,26 +64,22 @@ background: radial-gradient(circle, rgba(242,238,244,1) 0%, rgba(249,249,249,0.4
 }
 
 .contact_link {
-  /*float: left;*/
   height: 2.5vw;
   width: 2.5vw;
-  /*padding-right: 20px;*/
   margin: 5%;
 
 }
 
 .contact_link_left {
-  /*float: left;*/
   height: 3.8vw;
   width: 3.8vw;
-  /*padding-right: 20px;*/
   margin: 5%;
 
 }
 
 .square img:hover {
     transform: scale(2.3);
-        -webkit-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
     transition-duration: 0.5s;
@@ -99,51 +95,23 @@ background: radial-gradient(circle, rgba(242,238,244,1) 0%, rgba(249,249,249,0.4
      z-index: 3;
 }
 
-
-
-.top_nav_desc{
-  display: block;
-  width: 100%;
-  background-color: #330055;
-}
-
-.top_nav_hidden{
+.floating_links{
   margin-left: 0;
   display: block;
-  /*padding: 0px 0px;*/
-  transform: scale(0.8);
-  width: 5vw;
+  /*transform: scale(0.8);*/
+  width: 7%;
   max-height:  70vh;
-  /*max-height: 3vh;*/
   position: fixed;
-  bottom: 7vh;
-  /*left: -40px;*/
-  /*transition: top 3s;*/
+  top: 7vh;
   transition: left 0.3s;
 }
-
-
-/*.top_nav_hidden div{*/
-/*  color: #ebeced;*/
-/*  padding: 10px 5px;*/
-/*}*/
-
-/*.top_nav_hidden a{*/
-/*  width: 80%;*/
-/*}*/
-
-/*.top_nav_hidden div:hover {*/
-/*  background-color: #ddd;*/
-/*  color: black;*/
-/*}*/
-
 
 
 .topnav {
   display: block;
   float: left;
   background-color: #330055;
-  height: 5vh;
+  height: 80%;
   padding: 50px 1px 1px 1px;
   width: 100%;
 }
@@ -186,19 +154,22 @@ background: radial-gradient(circle, rgba(242,238,244,1) 0%, rgba(249,249,249,0.4
   background: rgb(131,58,180);
   background: linear-gradient(351deg, rgba(131,58,180,1) 0%, rgba(164,29,253,1) 50%, rgba(69,73,252,1) 100%);
   width: 100%;
+  height: 100%;
 }
 
 .top_bar {
   display: table-cell;
   float: left;
-  max-height: 36vh;
   width: 70%%;
 }
 
 #emubt_svg {
   display: table-cell;
   float: right;
-  width: 30vh;  
+  height: 40vh;
+  width: 25vw;
+  max-height: 300px;
+  
 }
 
 .banner {
@@ -244,46 +215,36 @@ background: radial-gradient(circle, rgba(242,238,244,1) 0%, rgba(249,249,249,0.4
     100% { left:100%; }
 }
 
-/*h1 { color: #7c795d; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 5%; margin-top: 5px;}
-h2 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 28px; font-weight: 400; line-height: 32px; margin: 5% 5% 24px; }
-h3 { color: #7c795d; font-family: 'Source Sans Pro', sans-serif; font-size: 20px; font-weight: 400; line-height: 32px; margin: 5% 5% 24px; }
-
-p { color: #4c4a37; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; line-height: 32px; margin: 0 0 4px; text-align: justify; margin: 5%;}
-a { color: #ff9900; text-decoration: none; margin: 1%;}
-a:hover { color: #ffcc66 }
-*/
-
-h1 { color: black; font-family: 'Enriqueta', arial, serif; line-height: 1.25; font-size: 2vw; font-weight: 1000; line-height: 72px; margin: 5% 5% 14px; margin-top: 1%; text-align: left; text-transform: uppercase; }
-
+h1 {
+  color: black;
+  font-family: 'Enriqueta', arial, serif;
+  line-height: 1.25; font-size: 2vw;
+  font-weight: 1000;
+  line-height: 50px;
+  margin: 15px 15px 14px;
+  margin-top: 1%;
+  text-align: left;
+  text-transform: uppercase;
+}
 h2 { color: black; font-family: 'Raleway',sans-serif; font-size: 1.5vw; font-weight: 800; line-height: 2vh; margin: 0 0 1.5vh; margin-left: 20px; width: 80%;text-align: justify; }
-
-
 p { color: #333333; font-family: "Helvetica Neue",Arial,sans-serif; font-size: 16px; font-weight: 300; line-height: 1.5625; margin-bottom: 15px; margin: 2% 10% 2% 2%; text-align: justify;}
-/*p { color: black; font-family: 'Raleway',sans-serif; font-size: 18px; font-weight: 500; line-height: 32px; margin: 2% 10% 2% 2%; text-align: justify;}*/
-
-
 a { color: #c8c8c8; text-decoration: underline; }
-
-
 a:hover { color: #1c1c1c; text-decoration: underline; }
-
 .p_list {line-height: 12px; display:list-item;list-style-type: disc; margin: 1% 1% 1% 5%;}
 
-img { 
-    float: right;  
-    margin: 5px; 
-}
+/*img { */
+/*    float: right;  */
+/*    margin: 5px; */
+/*}*/
 
 .text {
   width:100%;
   margin-top: 5%;
   margin-bottom: 5%;
-  /*margin-left: 10%;*/
   border: 1px solid;
   border-left: 3px solid;
   border-left-color: #9d69b5;
   border-color: #dcd3e0 ;
-  /*box-shadow: 1px 1px 1px 1px #e0ddd3;*/
 }
 
 

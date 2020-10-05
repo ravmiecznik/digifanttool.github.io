@@ -3,28 +3,14 @@
   
 <head>
   <link rel="stylesheet" href="main.css">
+  
 </head>
   
   
 <body>
 <!--https://github.com/ravmiecznik/emub_bt_r/releases/latest/download/emubt_V2.6_01052020.hex-->
 
-    <div class=top_nav_hidden id="links">
-      <a title="messenger" href="https://m.me/tuningtool" ><img class="contact_link contact_link_left" src="resources/messenger.png"></a>
-      <a title="ravmiecznk@gmail.com" href="mailto:ravmiecznik@gmail.com?subject=EMUBT"><img class="contact_link contact_link_left" src="resources/email.png"></a>
-      <a title="Skype: ravmiecznik" href="skype:ravmiecznik?chat"><img class="contact_link contact_link_left" src="resources/skype.png"></a>
-      <a title="Digifant tool" href="https://www.youtube.com/channel/UCf1aKdZV842va2j9UnfraSQ?view_as=subscriber/"><img class="contact_link contact_link_left" src="resources/youtube.png"></a>
-      <a title="Digifant tool" href="https://www.facebook.com/tuningtool/"><img class="contact_link contact_link_left" src="resources/facebook.png"></a>
-      <a title="GIT" href="https://github.com/ravmiecznik/emub_bt_r/releases/latest"><img class="contact_link contact_link_left" src="resources/git-icon_1.png"></a>
-        <!--<a href="#home"><div>Home</div></a>-->
-        <!--<a href="#about"><div>About</div></a>-->
-        <!--<a href="#demos"><div>Demos</div></a>-->
-        <!--<a href="#gellery"><div>Gallery</div></a>-->
-        <!--<a href="#ordering"><div>Ordering</div></a>-->
-        <!--<a href="https://github.com/ravmiecznik/emub_bt_r/releases/latest"><div>Download</div></a>-->
-        <!--<a href="#links"><div>Links</div></a>-->
-        <!--<a href="#contact"><div>Contact</div></a>-->
-    </div>
+
 
 <div class="main">
   <!--<embed src="file:///home/rafal.miecznik/private/digifanttool.github.io/index.html" width="800px" height="900px" /> -->
@@ -42,18 +28,28 @@
   </div>
   
   <div class=top_bar_container>
-    <div class="top_bar" id="home">
+    <div class="top_bar" id="top_bar">
       <h1>BLUETOOTH EEPROM EMULATOR FOR DIGIFANT 1 </h1>
       <h2 style="margin-left: 6%; width: 100%;">Replace old EEPROM chip with this board !</h2>
       <h2 style="margin-left: 7%; width: 100%;">Enable data feedback for most of available Digifant 1 chips</h2>
       <h2 style="margin-left: 8%; width: 100%;">TunerPro support for data feedback and hit tracing</h2>
       <h2 style="margin-left: 9%; width: 100%;">Works in standalone mode without PC connection</h2>
     </div>
-    <div id="emubt_svg"><img src="resources/emubt.svg"> </div>
+    <div>
+      <img  id="emubt_svg" src="resources/emubt.svg">
+    </div>
       
   </div>
   <div id="streams">
     <div id="left_stream">
+    <div class=floating_links id="links">
+      <a title="messenger" href="https://m.me/tuningtool" ><img class="contact_link contact_link_left" src="resources/messenger.png"></a>
+      <a title="ravmiecznk@gmail.com" href="mailto:ravmiecznik@gmail.com?subject=EMUBT"><img class="contact_link contact_link_left" src="resources/email.png"></a>
+      <a title="Skype: ravmiecznik" href="skype:ravmiecznik?chat"><img class="contact_link contact_link_left" src="resources/skype.png"></a>
+      <a title="Digifant tool" href="https://www.youtube.com/channel/UCf1aKdZV842va2j9UnfraSQ?view_as=subscriber/"><img class="contact_link contact_link_left" src="resources/youtube.png"></a>
+      <a title="Digifant tool" href="https://www.facebook.com/tuningtool/"><img class="contact_link contact_link_left" src="resources/facebook.png"></a>
+      <a title="GIT" href="https://github.com/ravmiecznik/emub_bt_r/releases/latest"><img class="contact_link contact_link_left" src="resources/git-icon_1.png"></a>
+    </div>
       <div class="text">
       <h1 id="about">ABOUT</h1>
       <h2>
@@ -135,75 +131,7 @@
     <div class="footer">© 2020 Rafal Miecznik
     <a href="mailto:ravmiecznik@gmail.com?subject=EMUBT"> ravmiecznk@gmail.com</a>
   </div>
-<script>
-
-
-var slides = [
-  "afr_history.jpg",
-  "data_tracing.jpg",
-  "emubt_app.jpg",
-  "fuelve.jpg",
-  "knock_history.jpg",
-  "s1.jpg",
-  "s2.jpg",
-  "tunerpro1.jpg",
-];
-
-var slides_descriptions = [
-  "TunerPro support, AFR reading",
-  "TunerPro hit data tracing",
-  "Storage of up to 3 different binaries",
-  "Fuel, Ignition and other maps are editable",
-  "Knock tracing and monitoring",
-  "Price: 100EUR + 10EUR shipping",
-  "Board pemamently replaces old EEPROM chip",
-  "Support for TunerPro"
-];
-
-var max_slides = slides.length;
-var slide_num = 0;
-
-var carousel = document.getElementById('carousel');
-carousel.addEventListener("animationend", animation_end_watch, false);
-
-var slide_text = document.getElementById("slide_text");
-
-function animation_end_watch(){
-  rotate();
-  var newone = carousel.cloneNode(true);
-  carousel.parentNode.replaceChild(newone, carousel);
-  carousel = document.getElementById('carousel');
-  carousel.addEventListener("animationend", animation_end_watch, false);
-}
-
-function rotate(){
-    
-    slide_num += 1;
-    slide_num %= max_slides;
-    var slide_name = 'resources/carousel_slides/' + slides[slide_num];
-    console.log(slides[slide_num]);
-    carousel.setAttribute('src', slide_name);
-    slide_text.text = slides_descriptions[slide_num];
-    }
- 
-window.addEventListener("scroll", checkScroll, false);
-
-function checkScroll() {
-    document.getElementById("hidden_bar").style.display = "block";
-    if (window.scrollY > 300) {
-      //ocument.getElementById("hidden_bar").style.display = "block";
-      document.getElementById("hidden_bar").style.left = "0";
-      setTimeout(function() {document.getElementById("hidden_bar").style.left = "-200px";}, 5000);
-    }
-    else {
-      //document.getElementById("hidden_bar").style.display = "none";
-      document.getElementById("hidden_bar").style.left = "-200px";
-    }
-}
-
-
-
-</script>
 
 </body>
+<script src="main.js"></script>
 </html>
