@@ -10,7 +10,7 @@ floating_links.style.left = "-200px";
 
 var main_grid = document.getElementById("main_grid");
 var main_grid_default_style = main_grid.style;
-var alignement_switch_width = 1500;
+var alignement_switch_width = 1000;
 
 var p_tag_default_fontSize = document.getElementsByTagName('p')[0].style.fontSize;
 var p_tag_default_fontSize = document.getElementsByTagName('p')[0].style.fontSize;
@@ -54,11 +54,11 @@ function adapt_to_screen (switch_width) {
     var width = window.window.innerWidth;
     if(width <= switch_width){
       main_grid.style.gridTemplateColumns = "1fr";
-      set_p_tags_style_fontSize("30px");
+      //set_p_tags_style_fontSize("25px");
     }
     else{
       main_grid.style = main_grid_default_style;
-      set_p_tags_style_fontSize(p_tag_default_fontSize);
+      //set_p_tags_style_fontSize(p_tag_default_fontSize);
     }
 }
 
