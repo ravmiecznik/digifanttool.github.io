@@ -23,6 +23,7 @@ body{
   
 }
 
+
 .demo_window{
   border: 2px solid grey;
   box-shadow: 6px 6px 6px #c2cfca;
@@ -39,22 +40,34 @@ body{
      z-index: 3;
 }
 
-#main_grid{
-  display: grid;
-  grid-template-columns: 60vw 25vw;
-  /*grid-template-rows: 1fr 1fr;*/
+.main_grid{
+  display:grid;
+  grid-template-columns: 60vw 1fr;
   gap: 10px 14px ;
   margin-left: 10%;
   margin-right: 5%;
   margin-top: 2%;
   margin-bottom: 2%;
-  
-  grid-template-areas:
-    ". contact_view"
-    ". ."
+  /*grid-template-areas:*/
+  /*  ". contact_view"*/
+  /*  ". ."*/
 }
 
-#main_grid .cell {
+.simple_grid{
+  display:grid;
+  /*grid-template-columns: 60vw 25vw;*/
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px 14px ;
+  margin-left: 10%;
+  margin-right: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;  
+
+}
+
+.simple_grid .cell,
+.main_grid .cell {
   border: 1px solid;
   border-left: 4px solid;
   /*border-bottom: 1px solid;*/
@@ -72,12 +85,12 @@ body{
 /*  /*transition-duration: 0.5s;*/*/
 /*}*/
 
-#main_grid *:after {
-  content:attr(class);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+/*#main_grid *:after {*/
+/*  content:attr(class);*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*}*/
 
 #streams {
   display: table;
@@ -120,7 +133,7 @@ body{
   text-align: center;
   background-color: #330055;
   height: 0.5vh;
-  padding: 20px 20px;
+  padding: 20px 0px;
   color: #ebeced;
   margin-bottom: 0;
   width: 100%;
@@ -156,6 +169,10 @@ body{
   width: 3.8vw;
   margin: 5%;
 
+}
+
+.square {
+  margin-left: 5%;
 }
 
 .square img:hover {
@@ -259,9 +276,10 @@ body{
 }
 
 .top_bar {
+  float: left;
   display: table-cell;
   float: left;
-  width: 70%%;
+  width: 60vw;
 }
 
 .top_bar h2 {
@@ -334,7 +352,7 @@ h1 {
   text-transform: uppercase;
 }
 h2 { color: black; font-family: 'Raleway',sans-serif; font-size: 1.5vw; font-weight: 800; line-height: 2vh; margin: 0 0 2%; margin-left: 20px; width: 80%;text-align: justify; }
-p { color: #333333; font-family: "Helvetica Neue",Arial,sans-serif; font-size: 16px; font-weight: 300; line-height: 1.5625; margin-bottom: 15px; margin: 2% 2% 2% 2%; text-align: justify;}
+p { color: #333333; font-family: "Helvetica Neue",Arial,sans-serif; font-size: 18px; font-weight: 300; line-height: 1.5625; margin-bottom: 15px; margin: 2% 5% 2% 5%; text-align: justify;}
 a { color: #c8c8c8; text-decoration: underline; }
 a:hover { color: #1c1c1c; text-decoration: underline; }
 

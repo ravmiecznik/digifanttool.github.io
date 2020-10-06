@@ -49,8 +49,11 @@ var top_banner = document.getElementsByClassName("top_bar_container")[0];
 //    slide_text.text = slides_descriptions[slide_num];
 //    }
 
+
 window.onscroll = function() {checkScroll();};
-window.onresize = function() {checkScroll();};
+window.onresize = function() {checkResize();};
+
+var main = document.getElementById("main");
 
 var navbar = document.getElementsByClassName("topnav")[0];
 var sticky = navbar.offsetTop;
@@ -60,6 +63,16 @@ var top_bar = document.getElementsByClassName("top_bar_container")[0];
 var floating_links = document.getElementById("links");
 floating_links.style.left = "-200px";
 checkScroll();
+
+function checkResize() {
+    checkScroll();
+    //p = document.getElementsByTagName('p');
+    //for (var i=0; i<p.length; i++){
+    //  p[i].style.fontSize = "20px";
+    //}
+    //main.classList.remove("main_grid");
+    //main.classList.add("simple_grid");
+}
 
 function checkScroll() {
 
