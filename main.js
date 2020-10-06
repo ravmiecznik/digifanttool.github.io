@@ -50,6 +50,7 @@ var top_banner = document.getElementsByClassName("top_bar_container")[0];
 //    }
 
 window.onscroll = function() {checkScroll();};
+window.onresize = function() {checkScroll();};
 
 var navbar = document.getElementsByClassName("topnav")[0];
 var sticky = navbar.offsetTop;
