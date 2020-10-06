@@ -41,10 +41,10 @@ body{
 
 #main_grid{
   display: grid;
-  grid-template-columns: 60vw 22vw;
+  grid-template-columns: 60vw 25vw;
   /*grid-template-rows: 1fr 1fr;*/
   gap: 10px 14px ;
-  margin-left: 15%;
+  margin-left: 10%;
   margin-right: 5%;
   margin-top: 2%;
   margin-bottom: 2%;
