@@ -5,10 +5,6 @@ body{
   background: radial-gradient(circle, rgba(242,238,244,1) 0%, rgba(249,249,249,0.42) 100%);
 }
 
-.main {
-  align-content: center;
-}
-
 /*DEMO GRID*/
 #demos_grid {
   display: grid;
@@ -49,7 +45,7 @@ body{
   margin-bottom: 2%;
 }
 
-.simple_grid{
+.horizontal_grid{
   display:grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
@@ -96,20 +92,29 @@ body{
   display: table-cell;
   float: left;
   margin-left: 5%;
-  padding: 2%;
+  padding: 5%;
+  width: 1%;
 }
 
-.contact_link {
-  height: 2.5vw;
-  width: 2.5vw;
-  margin: 5%;
-
+.contact_view a img {
+  width: 1000%;
+  padding-left: 5%;
 }
+
+.contact_view a img:hover {  
+  transform: scale(1.5);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+   z-index: 3;
+}
+
+
 
 .contact_link_left {
   height: 3.8vw;
   width: 3.8vw;
-  margin: 5%;
 
 }
 
