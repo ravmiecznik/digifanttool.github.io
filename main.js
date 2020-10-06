@@ -12,6 +12,9 @@ var main_grid = document.getElementById("main_grid");
 var main_grid_default_style = main_grid.style;
 var alignement_switch_width = 1500;
 
+var p_tag_default_fontSize = document.getElementsByTagName('p')[0].style.fontSize;
+var p_tag_default_fontSize = document.getElementsByTagName('p')[0].style.fontSize;
+
 checkScroll();
 adapt_to_screen(alignement_switch_width);
 
@@ -20,10 +23,6 @@ adapt_to_screen(alignement_switch_width);
 function checkResize() {
     adapt_to_screen(alignement_switch_width);
     checkScroll();
-    //p = document.getElementsByTagName('p');
-    //for (var i=0; i<p.length; i++){
-    //  p[i].style.fontSize = "20px";
-    //}
     //main.classList.remove("main_grid");
     //main.classList.add("simple_grid");
 }
@@ -52,14 +51,22 @@ function checkScroll() {
 }
 
 function adapt_to_screen (switch_width) {
-    console.log("adapt" + switch_width + ' ' + window.window.innerWidth);
     var width = window.window.innerWidth;
     if(width <= switch_width){
-      main_grid.style.gridTemplateColumns = "1fr";  
+      main_grid.style.gridTemplateColumns = "1fr";
+      set_p_tags_style_fontSize("30px");
     }
     else{
-      main_grid.style = main_grid_default_style;  
+      main_grid.style = main_grid_default_style;
+      set_p_tags_style_fontSize(p_tag_default_fontSize);
     }
+}
+
+function set_p_tags_style_fontSize(size){
+  p = document.getElementsByTagName('p');
+  for (var i=0; i<p.length; i++){
+    p[i].style.fontSize = size;
+  }
 }
 
 

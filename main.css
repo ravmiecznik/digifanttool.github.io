@@ -57,6 +57,15 @@ body{
 
 }
 
+/*.cell:active {*/
+/*    transform: scale(1.5);*/
+/*  -webkit-transition-duration: 0.5s;*/
+/*  -moz-transition-duration: 0.5s;*/
+/*  -o-transition-duration: 0.5s;*/
+/*  transition-duration: 0.5s;*/
+/*   z-index: 3;*/
+/*}*/
+
 .simple_grid .cell,
 .main_grid .cell {
   border: 1px solid;
@@ -262,7 +271,7 @@ a:hover {
   line-height: 12px;
   display:list-item;
   list-style-type: disc;
-  margin: 5px 1px 5px 7%;
+  margin: 2% 1px 2% 15%;
 }
 
 .link a:link { color: #3562ab; font-family: 'Raleway',sans-serif; font-size: 25px; font-weight: 600; line-height: 25px; text-align: left; margin: auto; display: list-item;list-style-type: disc; margin-left: 5%; margin-top: 0px;}
