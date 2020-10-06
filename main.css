@@ -163,7 +163,7 @@ body{
 .topnav {
   display: block;
   background-color: #330055;
-  padding: 20px 1px 10px 1px; /* top right bottom left */
+  padding: 20px 1px 10px 10px; /* top right bottom left */
   width: 100vw;
 }
 
