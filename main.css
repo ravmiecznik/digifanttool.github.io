@@ -5,6 +5,61 @@ body{
   background: radial-gradient(circle, rgba(242,238,244,1) 0%, rgba(249,249,249,0.42) 100%);
 }
 
+.topnav {
+  display: block;
+  background-color: #330055;
+  padding: 20px 1px 10px 10px; /* top right bottom left */
+  width: inherit;
+}
+
+.topnav a {
+  color: #ebeced;
+  text-align: center;
+  padding: 20px 15px 10px 20px; /* top right bottom left */
+  text-decoration: none;
+  font-size: 2.5vh;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #333;
+  color: white;
+}
+
+.top_bar_container{
+  display: table;
+  background: rgb(131,58,180);
+  background: linear-gradient(351deg, rgba(131,58,180,1) 0%, rgba(164,29,253,1) 50%, rgba(69,73,252,1) 100%);
+  width: 100vw;
+  height: 100%;
+}
+
+.top_bar_txt {
+  float: left;
+  display: table-cell;
+  float: left;
+  width: 60%;
+}
+
+.top_bar h2 {
+  font-size: 1.5vw;
+}
+
+#emubt_svg {
+  display: table-cell;
+  float: right;
+  height: 40vh;
+  width: 25vw;
+  max-height: 300px;
+}
+
+
+
+
 /*DEMO GRID*/
 #demos_grid {
   display: grid;
@@ -80,11 +135,10 @@ body{
   display: block;
   text-align: center;
   background-color: #330055;
-  height: 0.5vh;
-  padding: 20px 0px;
+  /*height: 2vh;*/
+  padding: 15px 0px 15px 0px; /*top right bottom left*/
   color: #ebeced;
-  margin-bottom: 0;
-  width: 100%;
+  width: 100vw;
   
 }
 
@@ -159,63 +213,10 @@ body{
   transition: left 0.3s;
 }
 
-
-.topnav {
-  display: block;
-  background-color: #330055;
-  padding: 20px 1px 10px 10px; /* top right bottom left */
-  width: 100vw;
-}
-
-.topnav a {
-  color: #ebeced;
-  text-align: center;
-  padding: 20px 15px 10px 20px; /* top right bottom left */
-  text-decoration: none;
-  font-size: 2.5vh;
-}
-
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #333;
-  color: white;
-}
-
-.top_bar_container{
-  display: table;
-  background: rgb(131,58,180);
-  background: linear-gradient(351deg, rgba(131,58,180,1) 0%, rgba(164,29,253,1) 50%, rgba(69,73,252,1) 100%);
-  width: 100vw;
-  height: 100%;
-}
-
-.top_bar_txt {
-  float: left;
-  display: table-cell;
-  float: left;
-  width: 60%;
-}
-
-.top_bar h2 {
-  font-size: 1.5vw;
-}
-
-#emubt_svg {
-  display: table-cell;
-  float: right;
-  height: 40vh;
-  width: 25vw;
-  max-height: 300px;
 }
 
 h1 {
