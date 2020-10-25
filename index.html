@@ -12,7 +12,7 @@
   <!--<embed src="file:///home/rafal.miecznik/private/digifanttool.github.io/index.html" width="800px" height="900px" /> -->
 
   
-    <div class=top_bar_container>
+    <div class="top_bar_container">
       <div class="topnav">
         <a class="active" href="#home">Home</a>
         <a href="#about">About</a>
@@ -43,40 +43,85 @@
     </div>
     
     
-    <div class="main_grid" id="main_grid">
-        <div class="cell text" id="about">
+    <div class="main_grid bottom_border" id="main_grid">
+        <div class="cell text bottom_border" id="about">
           <h1>ABOUT</h1>
           <h2>
-            Below is short description of Digitool and emulator device:
+            Below is short description of my board:
           </h2>
           <div class="square"> 
             <!--<img src="resources/emubt.svg">-->
             <img src="resources/emubt_color.png" style="width:15vw; float: left; margin: 15px;">
           </div>
           <p>
-            This modification works only with Digifant1 injection system, so if you deal with MK2, Passat or Corrado equipped with Digifant 1
-            this tool will significantly improve tuning and problems tracking with the injection system. Digifant 1 originally was installed in G60
-            versions but there is also a very popular modification for 16V engines, you swap the injection and get rid of old K-Jetronic/Ke-Jetronic.
-            This tool will work with 16V modified version too. So basically to enable feedback from ECU you need to attach a piece of my code into original
-            Digifant 1 code, so far it works with single iginiton map version, but I have plan to adapt it to 3 map version, but I want to refactor
-            my emulator code first. So I can provide you a modified binary (eeprom image) and a small device which you will connect to MIL cable and with
-            USB cable to PC. You also need a TunerPro with my definition files for maps modification and definition file to decode serial data from Digifant itself.
-            If you have it you are able to track ECU data in real time, you get about 10 data frames per second which includes:
-            current RPM, MAP, ECT, IAT, knock voltage per cylinder, KNOCK flag, applied additional retard which is a clue that your ignition or fuel maps should
-            be corrected at this point, calculated injection time for given revolution, NB02 reading, you can connect WBO2 output instead of COPOT and track WBO2
-            reading as well. If you are going to modify the program you can disable COPOT potentiometer and set it from software, I do it like that and connect WBO2
-            driver output to COPOT pin. There is a lot more data but those are most significant ones. I will post somewhere here a link to my adx file so you can check
-            what kind of data you can get. Another tool which I am refactoring at the moment is this BT emulator. If you have it you don't need this small adapter,
-            no drivers are needed and cables. It sends the feedback data from ECU to TunerPro over Bluetooth and is also capable to emulate EEPROM chip, it also works
-            without PC so basically you can replace your old chip with this device and apply changes to emulated chip at any time without a programmer and there is
-            no need to open the ECU anymore if you want to change something in your maps or program itself.
+            This board can replace old EEPROM chip permanently. It doesn't require any external power source.
+            It lets you emulate any Digifant 1 EEPROM binary image, it also can enable data feedback for all
+            non customized EERPOM images, anyway it works for most customized and tuned EERPOM images too but no 100% warranty for that.
           </p>
+          <p>
+            <br><br><br><br>
+            It's big advantage is that it transfers all data over Bluetooth:
+            <ul>
+              <li>uploading and reading currently emulated EEPROM image</li>
+              <li>Digifant 1 data feedback</li>
+            </ul>
+          </p>
+          <p>
+            Because it uses Bluetooth and doesn't require external power source it can operate without PC connection to emulate the program.
+            User can upload any binary with some modifications for instance and disconnect PC at any time and the board still emulates the program even if you restart engine.
+            Uploaded image is stored in permanent memory of the board, in three different banks actually, and emulation starts whenever you turn ignition on.
+            It works just like regular EEPROM chip but you can update EEPROM image at any time using Bluetooth interface and additionally the board can enable Digifant data feedback.
+          </p>
+          
+          <h2>
+            Data feedback
+          </h2>
+          <p>
+            So the board let's you receive data from your ECU ! <a href=https://www.youtube.com/embed/b4Lb02Id1Gc>check this YOUTUBE video</a>
+            <br>
+            At the moment it fully supports TunerPro. User can connect the board to TunerPro and having appropriate adx files receive and decode data from ECU. I provide all the necessary adx, xdf files,
+            also some ready and tested Digifant 1 binaries with the board (go to <a href=#download>Download</a> section).
+            <br>
+            The board will also support <a href="https://play.google.com/store/apps/details?id=com.sgiroux.aldldroid&hl=en_US&gl=US">ALDL</a> droid, this works at the moment but requires some improvements.
+            <a href="https://www.youtube.com/watch?v=T1we1pdiohQ">DF1 and ALDL droid</a>
+          </p>
+          
+          <h2>
+            Data feedback benefits
+          </h2>
+          <p>
+            First of all user can get all raw sensors readings which allows to identify problems like faulty lambda sensor, knock sensor, temperature sensors etc.
+            As all Digifant 1 users know, searching for root cause of any problems related with badly running engine is problematic because there is no diagnostic interface for DF1 except poor blink codes.
+            Whith this board DF1 users life is easier.
+            <br>
+            Another important thing to mention is that user can read some ECU running conditions like if it is in WOT mode or if there was any Knock detonation detected, personally I used this feature as
+            a basis to tune my car. It is also possible to get currently calculated injection time, current timing advance etc. Check <a href="">adx</a> file for more details.
+            <br>
+            Another useful feature is hit data tracing with TunerPro. Having the board and all adx, xdf files provided with it user can monitor at which point of given map (FUEL, IGNITION etc)
+            some event occurred, like at which point Knock detonation was detected, then user can modify Ignition map to avoid the Knock, what mixture was at given FUEL map point (RPM vs MAP reading), then
+            user can modify FUEL map accordingly.
+            <br>
+            It is also possible to connect Wideband Sensor output to DF1 ECU ! so the user can monitor mixture in wide range and modify Fuel maps as required. So now you know at what RPM and Engine Load (MAP)
+            the fuel mixture is.
+          </p>
+          
+          <h2>
+            Emulation benefits
+          </h2>
+          <p>
+            I suppose this is quite obvious: old fashion EEPROM programmer is not needed anymore, which is quite expensive anyway.
+            The biggest benefit is that user can update, or reprogram as you prefer, emulated EEPROM image at any time by connecting PC to the board.
+            User can also use three different banks as a backup or alternative programs to be emulated.
+            
+            Opening ECU, removing EERPOM chip, reprogramming, and putting all back together is time consuming...
+          </p>
+          
         </div>
         
-        <div class="cell"><h1>SLIDES HERE</h1></div>
+        <div class="cell bottom_border" id="download"><h1>DOWNLOAD</h1></div>
         
         
-        <div class="cell" id="demos">
+        <div class="cell bottom_border" id="demos">
           <h1>DEMOS</h1>
             <div id="demos_grid">
               <iframe class="demo_window" src="https://www.youtube.com/embed/b4Lb02Id1Gc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -92,7 +137,7 @@
         </div>
         
         <div>
-          <div class="cell text">
+          <div class="cell text bottom_border">
             <h1 id="ordering">ORDERING</h1>
               <p>
               To order the board you can contact me with:
@@ -106,7 +151,7 @@
             </p>
           </div>
           
-          <div class="contact_view text cell" id="contact">
+          <div class="contact_view text cell bottom_border" id="contact">
             <h1 style="font-size: 1.5vw;">CONTACT</h1>
             <div class="contact_view" style="margin-left: 5%;"><a title="ravmiecznk@gmail.com" href="mailto:ravmiecznik@gmail.com?subject=EMUBT" style="font-size: 20px;">ravmiecznk@gmail.com</a></div>
             <div>
