@@ -16,7 +16,7 @@ var p_tag_default_fontSize = document.getElementsByTagName('p')[0].style.fontSiz
 var p_tag_default_fontSize = document.getElementsByTagName('p')[0].style.fontSize;
 
 checkScroll();
-adapt_to_screen(alignement_switch_width);
+checkResize();
 
 
 
