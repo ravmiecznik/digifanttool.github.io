@@ -48,6 +48,10 @@ body{
   width: 60%;
 }
 
+.top_bar h1 {
+  font-size: 1.5vw;
+}
+
 .top_bar h2 {
   font-size: 1.5vw;
 }
