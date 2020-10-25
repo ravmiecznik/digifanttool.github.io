@@ -1,8 +1,7 @@
 
 body{
-  font-family: Verdana;
-  background: rgb(242,238,244);
-  /*background: radial-gradient(circle, rgba(242,238,244,1) 0%, rgba(249,249,249,0.42) 100%);*/
+  font-family: serif,monospace;
+  color: #ebeced;
   background: rgb(4, 13, 25);
 }
 
@@ -14,7 +13,6 @@ body{
 }
 
 .topnav a {
-  color: #ebeced;
   text-align: center;
   padding: 20px 15px 10px 20px; /* top right bottom left */
   text-decoration: none;
@@ -249,42 +247,30 @@ body{
   width: 100%;
 }
 
-h1, h2, p, li {
+h1, h2, p, li, .footer {
   color: #ebeced;
 }
 
 h1 {
-  /*color: black;*/
-  color: #ebeced;
-  /*font-family: 'Enriqueta', arial, serif;*/
-  line-height: 1.25;
-  font-size: 2.5em;
-  font-weight: 1000;
-  line-height: 50px;
-  margin: 15px 15px 14px;
-  margin-top: 1%;
-  margin-left: 2%;
+  font-size:max(2vw, 25px);
+  font-weight:1000;
+  line-height: 100%;
+  margin: 0px 15px 0px 0px; /* top right bottom left*/
   text-align: left;
   text-transform: uppercase;
 }
 
 h2 {
-  /*color: black;*/
-  /*font-family: 'Raleway',sans-serif;*/
-  font-size: 2em;
+  font-size:max(1.8vw, 20px);
   font-weight: 800;
-  line-height: 2vh;
-  margin: 0 0 2%;
-  margin-left: 20px;
+  line-height: 100%;
+  margin: 5% 15px 10px 0px; /* top right bottom left*/
   width: 80%;
   text-align: justify;
 }
 
 p, li {
-  /*color: #333333;*/
-  /*font-family: "Helvetica Neue",Arial,sans-serif;*/
-  /*font-size: 18px;*/
-  font-size: 1.5em;
+  font-size:max(1.3vw, 15px);
   font-weight: 300;
   line-height: 1.3;
   margin-bottom: 10px;
@@ -297,12 +283,12 @@ a {
 }
 
 a:hover {
-  color: #1c1c1c; text-decoration: underline;
+  color: #2B6175; text-decoration: underline;
 }
 
 .text {
   width:100%;
-  margin-bottom: 2%;
+  /*margin-bottom: 2%;*/
 }
 
 .text p.p_list li ul{

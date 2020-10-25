@@ -17,6 +17,7 @@ var p_tag_default_fontSize = document.getElementsByTagName('p')[0].style.fontSiz
 
 checkScroll();
 checkResize();
+GetLatestReleaseInfo();
 
 
 
@@ -68,6 +69,44 @@ function set_p_tags_style_fontSize(size){
     p[i].style.fontSize = size;
   }
 }
+
+function GetLatestReleaseInfo() {
+  $.getJSON("https://api.github.com/repos/ravmiecznik/emub_bt_r/releases/latest").done(function(release) {
+    var release_num = release.html_url.split('/').pop();
+    var assets = release.assets;
+    var asset_abbreviation = {
+      'bin': "Digifant EEPROM image",
+      'adx': "TunerPro data logginng definition file",
+      'xdf': "TunerPro map definition file",
+      'pdf': "manual file",
+      'hex': "EMUBT image file, use for reflashing",
+      'rar': "Compressed executable file",
+      'exe': "Executable appliaction"
+    }
+    
+    download_section = document.getElementById("release");
+    release_link = download_section.getElementsByTagName('h2')[0].getElementsByTagName('a')[0];
+    release_link.textContent = "EMUBT release: " + release_num;
+    release_link.title = "GIT";
+    release_link.href=release.html_url;
+    
+    console.log(assets.length);
+    for (var i=0; i<assets.length; i++){
+      link = document.createElement("p");
+      a_link = document.createElement("a");
+      a_link.textContent = assets[i].name;
+      a_link.href = assets[i].browser_download_url;
+      link.appendChild(a_link);
+      download_section.appendChild(link);
+      
+      var extension = assets[i].name.split('.').pop();
+      link.title = asset_abbreviation[extension];
+      
+    }
+    
+  });
+}
+
 
 
 //var max_slides = slides.length;
