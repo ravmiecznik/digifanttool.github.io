@@ -57,9 +57,10 @@ body{
 #emubt_svg {
   display: table-cell;
   float: right;
-  height: 40vh;
-  width: 25vw;
-  max-height: 300px;
+  /*height: 150%;*/
+  height: 25vh;
+  /*width: 25vw;*/
+  max-height: 200px;
   
   background: #4B1F9E;
   margin: 3%;
