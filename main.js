@@ -85,10 +85,17 @@ function GetLatestReleaseInfo() {
     }
     
     download_section = document.getElementById("release");
-    release_link = download_section.getElementsByTagName('h2')[0].getElementsByTagName('a')[0];
+    release_link = download_section.getElementsByTagName('h3')[0].getElementsByTagName('a')[0];
     release_link.textContent = "EMUBT release: " + release_num;
     release_link.title = "GIT";
     release_link.href=release.html_url;
+    
+    div_pdf = document.getElementById("pdf");
+    div_bin = document.getElementById("bin");
+    div_exe = document.getElementById("exe");
+    div_hex = document.getElementById("hex");
+    div_other = document.getElementById("other");
+    div_tuner_pro = document.getElementById("tuner_pro");
     
     console.log(assets.length);
     for (var i=0; i<assets.length; i++){
@@ -96,11 +103,44 @@ function GetLatestReleaseInfo() {
       a_link = document.createElement("a");
       a_link.textContent = assets[i].name;
       a_link.href = assets[i].browser_download_url;
-      link.appendChild(a_link);
-      download_section.appendChild(link);
+      a_link.classList.add("git_asset");
+      
+      
       
       var extension = assets[i].name.split('.').pop();
       link.title = asset_abbreviation[extension];
+      
+      if(extension == 'pdf'){
+        div_pdf.appendChild(link);
+        div_pdf.getElementsByTagName('h4')[0].textContent = "Manuals:";
+      }
+      else if(extension == 'bin'){
+        div_bin.appendChild(link);
+        div_bin.getElementsByTagName('h4')[0].textContent = "Digifant tested EEPROMs:";
+      }
+      else if(extension == 'exe' || extension == 'rar'){
+        div_exe.appendChild(link);
+        div_exe.getElementsByTagName('h4')[0].textContent = "EmuBT app:";
+      }
+      else if(extension == 'adx' || extension == 'xdf'){
+        div_tuner_pro.appendChild(link);
+        div_tuner_pro.getElementsByTagName('h4')[0].textContent = "TunerPro files:";
+      }
+      else if(extension == 'adx' || extension == 'xdf'){
+        div_tuner_pro.appendChild(link);
+        div_tuner_pro.getElementsByTagName('h4')[0].textContent = "TunerPro files:";
+      }
+      else if(extension == 'hex'){
+        div_hex.appendChild(link);
+        div_hex.getElementsByTagName('h4')[0].textContent = "EmuBT board flash file:";
+      }
+      else{
+        div_other.appendChild(link);
+        div_other.getElementsByTagName('h4')[0].textContent = "Other:";
+        
+      }
+      link.appendChild(a_link);            
+
       
     }
     
