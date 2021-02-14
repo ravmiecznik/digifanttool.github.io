@@ -96,6 +96,7 @@ function GetLatestReleaseInfo() {
     div_hex = document.getElementById("hex");
     div_other = document.getElementById("other");
     div_tuner_pro = document.getElementById("tuner_pro");
+    div_aldl_droid = document.getElementById("aldldroid");
     
     console.log(assets.length);
     for (var i=0; i<assets.length; i++){
@@ -123,8 +124,15 @@ function GetLatestReleaseInfo() {
         div_exe.getElementsByTagName('h4')[0].textContent = "EmuBT app:";
       }
       else if(extension == 'adx' || extension == 'xdf'){
-        div_tuner_pro.appendChild(link);
-        div_tuner_pro.getElementsByTagName('h4')[0].textContent = "TunerPro files:";
+        if(assets[i].name.includes("aldl_droid")){
+          div_aldl_droid.appendChild(link);
+          link.title = "ALDLdroid data logginng definition file";
+          div_aldl_droid.getElementsByTagName('h4')[0].textContent = "ALDLdroid files:";          
+        }
+        else{
+          div_tuner_pro.appendChild(link);
+          div_tuner_pro.getElementsByTagName('h4')[0].textContent = "TunerPro files:";
+        }
       }
       else if(extension == 'adx' || extension == 'xdf'){
         div_tuner_pro.appendChild(link);
