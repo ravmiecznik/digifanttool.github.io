@@ -1,6 +1,8 @@
 
-window.onscroll = function() {checkScroll();};
+
+window.onload = function() {checkResize();};
 window.onresize = function() {checkResize();};
+window.onscroll = function() {checkScroll();};
 
 var top_banner = document.getElementsByClassName("top_bar_container")[0];
 var navbar = document.getElementsByClassName("topnav")[0];
@@ -10,7 +12,7 @@ floating_links.style.left = "-200px";
 
 var main_grid = document.getElementById("main_grid");
 var main_grid_default_style = main_grid.style;
-var alignement_switch_width = 1000;
+var alignement_switch_width = 1500;
 
 var p_tag_default_fontSize = document.getElementsByTagName('p')[0].style.fontSize;
 var p_tag_default_fontSize = document.getElementsByTagName('p')[0].style.fontSize;
@@ -23,7 +25,7 @@ GetLatestReleaseInfo();
 
 function checkResize() {
     adapt_to_screen(alignement_switch_width);
-    checkScroll();
+    //checkScroll();
     //main.classList.remove("main_grid");
     //main.classList.add("simple_grid");
 }
@@ -96,7 +98,7 @@ function GetLatestReleaseInfo() {
     div_hex = document.getElementById("hex");
     div_other = document.getElementById("other");
     div_tuner_pro = document.getElementById("tuner_pro");
-    div_aldl_droid = document.getElementById("aldldroid");
+    div_aldl_droid = document.getElementById("aldldroid_files");
     
     console.log(assets.length);
     for (var i=0; i<assets.length; i++){
