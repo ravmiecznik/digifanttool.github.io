@@ -316,7 +316,8 @@ a:hover {
 .link a:visited {color: #152e57; font-size: 26px; line-height: 25px; text-align: left; margin: auto; display: list-item;list-style-type: disc; margin-left: 5%; margin-top: 0px;}
 
 .git_asset {
-  font-size: 60%;
+  font-size:max(1.3vw, 15px);
+  /*font-size: 60%;*/
   margin-left: 8%;
   line-height: 1;
 }
