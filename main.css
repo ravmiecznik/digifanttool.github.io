@@ -176,8 +176,19 @@ body{
 }
 
 .main_iframe{
-  width:40%;
-  height:22vh;
+  position: relative;
+  width: 70%;
+  height: 0;
+  /*text-align: center;*/
+  padding-bottom: 30%;
+}
+
+.main_iframe iframe{
+  position: absolute;
+  width:70%;
+  height:70%;
+  top: 0;
+  left:30%;
 }
 
 .contact_view{
@@ -251,6 +262,7 @@ body{
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 h1, h2, p, li, .footer {
