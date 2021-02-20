@@ -14,12 +14,12 @@
   
     <div class="top_bar_container">
       <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#demos">Demos</a>
-        <a href="#ordering">Ordering</a>
-        <a href="#contact">Contact</a>
-        <a href="#download">Download</a>
+        <a class="active" href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#demos">Demos</a>
+        <a href="index.html#ordering">Ordering</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#download">Download</a>
         <a href="tutorials.html#tutorials.html">Tutorials</a>
       </div>
       
@@ -48,25 +48,36 @@
     <div class="main_grid bottom_border" id="main_grid">
         <div class="cell text bottom_border" id="about">
           
-          <div class="main_iframe">
-            <iframe src="https://www.youtube.com/embed/rUin6Hb9cz8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="main_iframe">
-            <iframe src="https://www.youtube.com/embed/xq7Y-FIqNp0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <h2>NEWS</h2>
-          <p>
-            14.02.2021: ALDL droid support implemented !!! <a href=#aldldroid>check here for details</a>
-          </p>
+
           
-          <h1>ABOUT</h1>
+          <h1>TUTORIALS</h1>
           <h2>
-            Below is short description of the board:
+            How this works
           </h2>
-          <div class="square"> 
-            <!--<img src="resources/emubt.svg">-->
-            <img src="resources/emubt_color.png" style="width:15vw; float: left; margin: 15px;">
+          <div class="grid_picture"> 
+            <img src="resources/emubtapp.JPG" style="width:15vw;float: left;margin: 15px;">
           </div>
+
+          <p>
+            In order to upload any file for emulation this application is needed: <a href="index.html#download">emubt_Windows10.exe</a>.
+            Picture on the left shows how it looks. On the "Banks" panel user can select one of three available banks or slots if you prefer
+            where binary file will be stored. "BIN FILE" panel shows path to the current binary file. On the picture the first bank is highlited
+            so it means that first bank is being eumlated and any current operation is done on first bank. In this case it's name is "3MAP 6636".
+            BIN FILE path shows "1MAP 6046 - G60_copot_patch.bin". By clicking UPLOAD button this file will be pushed and stored in the board,
+            once this process is finished the board will emulate this file if "reload sram on save" checkbox is selected.
+          </p>
+          <div class="grid_picture"> 
+            <img src="resources/upload.jpg" style="width:15vw; margin: 15px;">
+          </div>
+          <p>
+            ...
+          </p>
+
+                    
+          <h2>
+            Uploading file for emulation
+          </h2>
+
           <p>
             This board can replace old EEPROM chip permanently. It doesn't require any external power source.
             It lets you emulate any Digifant 1 EEPROM binary image, it also can enable data feedback for all
@@ -165,84 +176,8 @@
           
         </div>
         
-        <div class="cell bottom_border" id="download">
-        <h1>DOWNLOAD</h1>
-          <div id="release">
-            <h3 ><a href="">RELSEASE NUMBER</a></h3>
-            <div id="pdf">
-              <h4></h4>
-            </div>
-            
-            <div id="bin">
-              <h4></h4>
-            </div>
-            
-            <div id="tuner_pro">
-              <h4></h4>
-            </div>
-            
-            <div id="exe">
-              <h4></h4>
-            </div>
-            
-            <div id="hex">
-              <h4></h4>
-            </div>
-            <div id="aldldroid_files">
-              <h4></h4>
-            </div>            
-            <div id="other">
-              <h4></h4>
-            </div>
-            
-            
-          </div>
-          <div id="tunerpro">
-            <h3 ><a href="https://www.tunerpro.net/">TunerPro home page</a></h3>
-          </div>
-          <div id="aldl_droid">
-            <h3 >
-              <a href="https://play.google.com/store/apps/details?id=com.sgiroux.aldldroid">ALDLdroid home page</a>
-            </h3>
-          </div>
-        </div>
-        
-        
-        <div class="cell bottom_border" id="demos">
-          <h1>DEMOS</h1>
-            <div id="demos_grid">
-              <iframe class="demo_window" src="https://www.youtube.com/embed/b4Lb02Id1Gc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <iframe class="demo_window" src="https://www.youtube.com/embed/xq7Y-FIqNp0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <iframe class="demo_window" src="https://www.youtube.com/embed/VVEnGDDLKik" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <iframe class="demo_window" src="https://www.youtube.com/embed/rUin6Hb9cz8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              
-            </div>
-        </div>
-        
         <div>
-          <div class="cell text bottom_border">
-            <h1 id="ordering">ORDERING</h1>
-              <p>
-              To order the board you can contact me with:
-              </p>
-              <p class="p_list">email</p>
-              <p class="p_list">facebook messenger</p>
-              <p class="p_list">skype</p>
-              <p>
-              The board price is 100EUR + 10EUR shipping worldwide.
-              Payment with PayPal, revolut or regular bank transfer
-            </p>
-          </div>
-          
-          <div class="contact_view text cell bottom_border" id="contact">
-            <h1 style="font-size: 1.5vw;">CONTACT</h1>
-            <div class="contact_view" style="margin-left: 5%;"><a title="ravmiecznk@gmail.com" href="mailto:ravmiecznik@gmail.com?subject=EMUBT" style="font-size: 20px;">ravmiecznk@gmail.com</a></div>
-            <div>
-              <a title="messenger" href="https://m.me/tuningtool" ><img src="resources/messenger.png"></a>
-              <a title="ravmiecznk@gmail.com" href="mailto:ravmiecznik@gmail.com?subject=EMUBT"><img src="resources/email2.png"></a>
-              <a title="Skype: ravmiecznik" href="skype:ravmiecznik@live.com?chat"><img src="resources/skype.png"></a>
-            </div>
-          </div>
+          <div class="cell text bottom_border"></div>
         </div>
     </div>
     <div class="footer">&copy 2020 Rafal Miecznik<a href="mailto:ravmiecznik@gmail.com?subject=EMUBT"> ravmiecznk@gmail.com</a></div>
