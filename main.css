@@ -22,9 +22,11 @@ body{
 
 .topnav a {
   text-align: center;
-  padding: 20px 15px 10px 20px; /* top right bottom left */
+  padding: 5px 15px 5px 15px; /* top right bottom left */
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-decoration: none;
-  font-size: 2.5vh;
+  font-size: 3.5vh;
 }
 
 .topnav a:hover {
