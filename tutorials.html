@@ -48,9 +48,122 @@
     <div class="main_grid bottom_border" id="main_grid">
         <div class="cell text bottom_border" id="about">
           
+          <h1>BASICS</h1>
+          <p>
+            This toolset can be split into three parts:
+            <li>Emulator board itself: replaces EEPROM chip in your ECU and emulates it, enables data feedback from your ECU</li>
+            <li>Windows application EMUBT which controls the board: allows to upload new files for emulation or provide basic configration</li>
+            <li>Tuning and data logging tools: tunerPro or ALDLdroid</li>
+            
+          </p>
+          <h2>
+            EMUBT
+          </h2>
+          <p>
+            <a href="index.html#download">DOWNLOAD LINK</a><br>
+            This is windows application which allows to upload new file for emulation, select emulation bank and configure each bank individually.
+            Each part of this application has interactive help: hover your mouse over each button, window or panel to display tooltip for each element.
+          </p>
+          <div class="pictures_grid"> 
+            <img class="grid_picture" src="resources/tooltip_example1.png">
+            <img class="grid_picture" src="resources/tooltip_example2.png">
+            <img class="grid_picture" src="resources/tooltip_example3.png">
+          </div>
+          
+          <h2>
+            TunerPro and ALDLdroid
+          </h2>
+          <h3>
+            TunerPro
+          </h3>
+          <p>
+            <a href="https://www.tunerpro.net/download/SetupTunerProRT_v500_9290.exe">DOWNLOAD LINK</a><br>
+            TunerPro is very powerfull tool which allows to decode, display and modify a program executed by ECU. ECU program contains all necessary
+            maps (fuel, ignition and other), vectors, flags etc and of course set of procedures which drives the engine.
+            In order to decode all maps defined in ECU program (example here: <a href="https://github.com/ravmiecznik/emub_bt_r/releases/download/V2.6.1/1MAP.6409.-.Original.G60.bin">DigifantBinaryExample.bin</a>)
+            you need to provide <a href="https://github.com/ravmiecznik/emub_bt_r/releases/download/V2.6.1/emubt_1MAP_6409.xdf">XDF</a> definition file to tunerPro. Note that there are few versions of Digifant1 binaries
+            and each may require its dedicated XDF file.
+          </p>
+          <div class="pictures_grid"> 
+            <img class="grid_picture" src="resources/tunerPro1.png">
+            <img class="grid_picture" src="resources/tunerPro2.png">
+          </div>
+          <p>
+            Having your binary file which runs in EMUBT emulation board and appropriate XDF file allows you to modify your maps or any other settings for your ECU.
+          </p>
+          <p>
+            Other powerfull feature of tunerPro is data logging and so called "hit data tracing". Hit data tracing means that it tracks feedback from ECU and shows in real time
+            or during log playback at wich point of your selected map ECU operates at given moment. For Fuel or Ignition maps it will track RPM and MAP reading (RPM vs Engine Load).
+            Check video below.
+          </p>
+          <div class="main_iframe">
+            <iframe src="https://www.youtube.com/embed/3I__gCqAGGI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p>
+            To make logging possible there is another file needed called "Acquisition Definition File" and it is dedicated for device you are using to to send data to tunerPro,
+            EMUBT emulator board in this case.
+            <a href="https://github.com/ravmiecznik/emub_bt_r/releases/download/V2.6.1/emubt.adx">EMUBT.adx</a><br>
+          </p>
+          <img src="resources/tunerPro3.png" class="center grid_picture">
+         <h4>
+            Try It !!
+         </h4>
+          <p>
+            Here are the steps to check out out how data logging works on tunerPro with EMUBT board using some collected log file.
+            <li>Install <a href="https://www.tunerpro.net/download/SetupTunerProRT_v500_9290.exe">tunerPro</a><br></li>
+            <li>Provide <a href="https://github.com/ravmiecznik/emub_bt_r/releases/download/V2.6.1/emubt_1MAP_6409.xdf">XDF</a> file for Digifant1 1MAP version file in tunerPro:<br> XDF->Select XDF</li>
+            <li>Provide <a href="https://github.com/ravmiecznik/emub_bt_r/releases/download/V2.6.1/emubt.adx">ADX</a> acquisition file for Digifant1 1MAP and EMUBT file in tunerPro:<br> Acquisition->Load Definition File</li>
+            <li>Provide <a href="https://github.com/ravmiecznik/emub_bt_r/releases/download/V2.6.1/1MAP.6409.-.Original.G60.bin">BIN</a> Digifant1 1MAP binary file in tunerPro:<br> File->Open Bin</li>
+            <li>And provide collected <a href="https://github.com/ravmiecznik/emub_bt_r/releases/download/V2.6.1/some_knock.xdl">LOG</a> file in tunerPro:<br> Acquisition->Load Log File</li>
+            <img src="resources/tunerPro4.png" class="center grid_picture">
+            <li>Hit Play in logging section visible in above picture</li>
+            <li>Try playing with buttons highlighed in red to see different views and all values possible to trace</li>
+            <li>To see all values in tunerPro:<br> Acquisition->Edit Definition File->Values </li>
+            <img src="resources/tunerPro5.png" class="center grid_picture">
+          </p>
+          
+          <h3>
+            ALDLdroid
+          </h3>
+          <p>
+            <a href="https://www.aldldroid.com/">ALDLdroid</a> is an Android appliction which does similar thing as tunerPro: allows to edit maps and receive data from EMUBT board.
+            It also allows to configure some commands to control EMUBT board for example it is possible to switch Banks containing different binary file for emualtion (to switch different
+            Digifant1 programs for emulation) without PC.
+          </p>
+          <img src="resources/aldldroid1.jpg" class="center grid_picture">
+          <img src="resources/aldldroid2.jpg" class="center grid_picture">
+          <p>
+            This application is not free and is available in Google Play store and it is installed per account so you pay once and you can use it on any Android device you are logged in.
+            To enable data logging in ALDLdroid you need to pair EMUBT bluetooth device and provide <a href="https://github.com/ravmiecznik/emub_bt_r/releases/download/V2.6.1/digifant1_emubt_aldl_droid_v1.adx">ALDLdroid adx</a> file
+            in ALDLdroid application.
+          </p>
+          
+          <h3>
+            EMUBT emulator board
+          </h3>
+          
+          <p>
+            Last missing puzzle is emulator board itself. Its main function is to emulate your old EEPROM chip. This board replaces the chip and can run in standalone mode without PC
+            connected to it. You can turn off your engine and start it again and the board will emulate your program again because it uses non-volatile memory to store it, actully it can
+            save three different programs for emualtion and it is possible to switch between those programs with EMUBT exe app or ALDLdroid.
+          </p>
+          <div class="pictures_grid"> 
+            <img class="grid_picture" src="resources/emubt_board.jpg">
+            <img class="grid_picture" src="resources/eeprom_chip.jpg">
+            <img class="grid_picture" src="resources/board_installed.jpg">
+          </div>
+          <p>
+            Another feature of this board is data feedback described in sections above in tunerPro and ALDLdroid. Digifant1 ECU doesn't provide any kind of data feedback.
+            Deep analysis of Digifant1 ECU and its program allowed me to enable such feedback. It provides all analog sensor reading like lambda sensor, intake manifold temperature,
+            engine coolant temperature, knock sensor reading and many more. More over it is possible to retreive any data processed by ECU like knock detection, additional advance related
+            to knock reading which allows you to tune your car, diagnose all sensors. Having tunerPro you can modify your program and upload it to EMUBT board to improve the perofrmance of
+            your car.
+            <br>All this works via Bletooth connection: reading and uploading new file for emulation and data feedback.
+          </p>
+          <p>..TO BE UPDATED..</p>
 
           
-          <h1>TUTORIALS</h1>
+<!--          <h1>TUTORIALS</h1>
           <h2>
             How this works
           </h2>
@@ -59,7 +172,7 @@
           </div>
 
           <p>
-            In order to upload any file for emulation this application is needed: <a href="index.html#download">emubt_Windows10.exe</a>.
+            In order to upload any file for emulation this application is needed: <a href="index.html#download">emubt_Windows10.exe</a> (or win7 version if you use this system).
             Picture on the left shows how it looks. On the "Banks" panel user can select one of three available banks or slots if you prefer
             where binary file will be stored. "BIN FILE" panel shows path to the current binary file. On the picture the first bank is highlited
             so it means that first bank is being eumlated and any current operation is done on first bank. In this case it's name is "3MAP 6636".
@@ -79,102 +192,9 @@
           </h2>
 
           <p>
-            This board can replace old EEPROM chip permanently. It doesn't require any external power source.
-            It lets you emulate any Digifant 1 EEPROM binary image, it also can enable data feedback for all
-            non customized EERPOM images, anyway it works for most customized and tuned EERPOM images too but no 100% warranty for that.
-          </p>
-          <p>
-            <br><br><br><br>
-            It's big advantage is that it transfers all data over Bluetooth:
-            <ul>
-              <li>uploading and reading currently emulated EEPROM image</li>
-              <li>Digifant 1 data feedback</li>
-            </ul>
-          </p>
-          <p>
-            Because it uses Bluetooth and doesn't require external power source it can operate without PC connection to emulate the program.
-            User can upload any binary with some modifications for instance and disconnect PC at any time and the board still emulates the program even if you restart engine.
-            Uploaded image is stored in permanent memory of the board, in three different banks actually, and emulation starts whenever you turn ignition on.
-            It works just like regular EEPROM chip but you can update EEPROM image at any time using Bluetooth interface and additionally the board can enable Digifant data feedback.
-          </p>
-          
-          <h2>
-            Data feedback
-          </h2>
-          <p>
-            So the board lets you receive data from your ECU ! <a href=https://www.youtube.com/embed/b4Lb02Id1Gc>check this YOUTUBE video</a>
-            <br>
-            At the moment it fully supports TunerPro. User can connect the board to TunerPro and having appropriate adx files receive and decode data from ECU. I provide all the necessary adx, xdf files,
-            also some ready and tested Digifant 1 binaries with the board (go to <a href=#download>Download</a> section).
-          </p>
-          
-          <h2>
-            Data feedback benefits
-          </h2>
-          <p>
-            First of all user can get all raw sensors readings which allows to identify problems like faulty lambda sensor, knock sensor, temperature sensors etc.
-            As all Digifant 1 users know, searching for root cause of any problems related with badly running engine is problematic because there is no diagnostic interface for DF1 except poor blink codes.
-            Whith this board DF1 users life is easier.
-            <br>
-            Another important thing to mention is that user can read some ECU running conditions like if it is in WOT mode or if there was any Knock detonation detected, personally I used this feature as
-            a basis to tune my car. It is also possible to get currently calculated injection time, current timing advance etc. Check <a href="">adx</a> file for more details.
-            <br>
-            Another useful feature is hit data tracing with TunerPro. Having the board and all adx, xdf files provided with it user can monitor at which point of given map (FUEL, IGNITION etc)
-            some event occurred, like at which point Knock detonation was detected, then user can modify Ignition map to avoid the Knock, what mixture was at given FUEL map point (RPM vs MAP reading), then
-            user can modify FUEL map accordingly.
-            <br>
-            It is also possible to connect Wideband Sensor output to DF1 ECU ! so the user can monitor mixture in wide range and modify Fuel maps as required. So now you know at what RPM and Engine Load (MAP)
-            the fuel mixture is.
-          </p>
-          
-          <h2>
-            Emulation benefits
-          </h2>
-          <p>
-            I suppose this is quite obvious: old fashion EEPROM programmer is not needed anymore, which is quite expensive anyway.
-            The biggest benefit is that user can update, or reprogram as you prefer, emulated EEPROM image at any time by connecting PC to the board.
-            User can also use three different banks as a backup or alternative programs to be emulated.
-            
-            Opening ECU, removing EERPOM chip, reprogramming, and putting all back together is time consuming...
-          </p>
-          <h2>
-            Tuning
-          </h2>
-          <p>
-            With use of this board, TunerPro and provided xdf definition files for TunerPro you can edit and adapt your Digifant1 program for your needs.
-            <a href=#tuner_pro>TunerPro definition file (xdf)</a> contains information about most important maps and vectors found in Digifant1 program:
-            <ul>
-              <li>Ignition map</li>
-              <li>Fuel map</li>
-              <li>Rev limiter</li>
-            </ul>
-          </p>
-          <p>
-            and a lot more information:
-          </p>
-          
-            <div class="pictures_grid">
-              <img class="grid_picture"  src="resources/parameters1.JPG">
-              <img class="grid_picture"  src="resources/parameters2.JPG">
-              <img class="grid_picture"  src="resources/parameters3.JPG">
-              <img class="grid_picture" src="resources/carousel_slides/fuelve.jpg">
-              <img class="grid_picture" src="resources/ignition_map3d.JPG">
-            </div>
-
-          <h2 id=aldldroid>
-            ALDLdroid support
-          </h2>
-          <p>
-            Since 14.02.2021 EMUBT supports ALDL droid. ALDLdroid is Android app to display ECU data, check <a href=https://play.google.com/store/apps/details?id=com.sgiroux.aldldroid>here</a>
-            for details.
-          </p>
-          <p>
-            In order to to make it work download <a href=#exe>emubt.hex</a> file version V2.5.4_1402202 or higher. The second file needed is
-            <a href=#hex>adx</a> file for ALDLdroid. Once ALDLdroid has been installed on your mobile device put adx file in: Android/data/com.sgiroux.aldldroid/files/adx/
-          </p>
-          
-          
-        </div>
+            ...
+          </p>-->
+        
         
         <div>
           <div class="cell text bottom_border"></div>

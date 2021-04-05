@@ -122,7 +122,13 @@ body{
   width: 25%;
   border: 4px solid;
   border-color: rgba(4,13,25,1);
-  
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 .grid_picture:hover{
