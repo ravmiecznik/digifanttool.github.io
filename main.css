@@ -13,6 +13,49 @@ body{
   background: rgb(4, 13, 25);
 }
 
+.main_iframe{
+  position: relative;
+  width: 70%;
+  height: 0;
+  padding-bottom: 30%;
+}
+
+.main_iframe iframe{
+  position: absolute;
+  width:70%;
+  height:70%;
+  top: 0;
+  left:30%;
+}
+
+.contact_view{
+  display: table;
+  align-content: center;
+}
+
+.contact_view a{
+  display: table-cell;
+  float: left;
+  margin-left: 5%;
+  padding: 5%;
+  width: 1%;
+}
+
+.contact_view a img {
+  width: 1000%;
+  padding-left: 5%;
+  filter: invert(80%);
+}
+
+.contact_view a img:hover {  
+  transform: scale(1.5);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+   z-index: 3;
+}
+
 .topnav {
   display: block;
   background-color: #330055;
@@ -199,72 +242,6 @@ body{
 /*}*/
                              
 
-/*##########################################################*/
-.footer{
-  display: block;
-  text-align: center;
-  background-color: #330055;
-  /*height: 2vh;*/
-  padding: 15px 0px 15px 0px; /*top right bottom left*/
-  color: #ebeced;
-  width: 100vw;
-  
-}
-
-.footer a:link {
-  color: #ebeced;
-}
-
-.main_iframe{
-  position: relative;
-  width: 70%;
-  height: 0;
-  /*text-align: center;*/
-  padding-bottom: 30%;
-}
-
-.main_iframe iframe{
-  position: absolute;
-  width:70%;
-  height:70%;
-  top: 0;
-  left:30%;
-}
-
-.contact_view{
-  display: table;
-  align-content: center;
-}
-
-.contact_view a{
-  display: table-cell;
-  float: left;
-  margin-left: 5%;
-  padding: 5%;
-  width: 1%;
-}
-
-.contact_view a img {
-  width: 1000%;
-  padding-left: 5%;
-  filter: invert(80%);
-}
-
-.contact_view a img:hover {  
-  transform: scale(1.5);
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-   z-index: 3;
-}
-
-.contact_link_left {
-  height: 3.8vw;
-  width: 3.8vw;
-
-}
-
 .square {
   margin-left: 5%;
 }
@@ -278,14 +255,6 @@ body{
      z-index: 3;
 }
 
-.contact_link:hover {
-  transform: scale(1.5);
-        -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-     z-index: 3;
-}
 
 .floating_links{
   margin-left: 0;
@@ -298,11 +267,41 @@ body{
   filter: invert(80%);
 }
 
+.contact_link_left {
+  height: 3.8vw;
+  width: 3.8vw;
+
+}
+
+.contact_link:hover {
+  transform: scale(1.5);
+        -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+     z-index: 3;
+}
+
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
+}
+
+.footer{
+  display: block;
+  text-align: center;
+  background-color: #330055;
+  /*height: 2vh;*/
+  padding: 15px 0px 15px 0px; /*top right bottom left*/
+  color: #ebeced;
+  width: 100vw;
+  
+}
+
+.footer a:link {
+  color: #ebeced;
 }
 
 h1, h2, p, li, .footer {

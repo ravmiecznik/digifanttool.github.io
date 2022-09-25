@@ -1,258 +1,304 @@
 <!DOCTYPE html>
 <html>
-  
+
 <head>
   <link rel="stylesheet" href="main.css">
   <meta charset="UTF-8">
 </head>
-  
-  
+
+
 <body id="home" style="margin: 0;">
-<!--https://github.com/ravmiecznik/emub_bt_r/releases/latest/download/emubt_V2.6_01052020.hex-->
+  <!--https://github.com/ravmiecznik/emub_bt_r/releases/latest/download/emubt_V2.6_01052020.hex-->
   <!--<embed src="file:///home/rafal.miecznik/private/digifanttool.github.io/index.html" width="800px" height="900px" /> -->
 
-  
-    <div class="top_bar_container">
-      <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#demos">Demos</a>
-        <a href="#ordering">Ordering</a>
-        <a href="#contact">Contact</a>
-        <a href="#download">Download</a>
-        <a href="tutorials.html#tutorials.html">HowTo</a>
-        <a href="tutorials.html#tryit">TryIt!</a>
-      </div>
-      
-      <div class="top_bar_txt square" id="top_bar">
-        <h1 style="width: 100%; font-size: 2vw;">BLUETOOTH EEPROM EMULATOR FOR DIGIFANT 1 </h1>
-        <h2 style="width: 100%; font-size: 1.4vw; margin: 10px 15px 10px 6%;">Replace old EEPROM chip with this board !</h2>
-        <h2 style="width: 100%; font-size: 1.4vw; margin: 10px 15px 10px 7%;">Enable data feedback for most of available Digifant 1 chips</h2>
-        <h2 style="width: 100%; font-size: 1.4vw; margin: 10px 15px 10px 8%;">TunerPro support for data feedback and hit tracing</h2>
-        <h2 style="width: 100%; font-size: 1.4vw; margin: 10px 15px 10px 9%;">Works in standalone mode without PC connection</h2>
-      </div>
-      <div>
-        <img  id="emubt_svg" src="resources/emubt.svg">
-      </div>  
-    </div>
-    <div class="bottom_border"><br></div>
-    <div class=floating_links id="links">
-      <a title="messenger" href="https://m.me/tuningtool" ><img class="contact_link contact_link_left" src="resources/messenger.png"></a>
-      <a title="ravmiecznk@gmail.com" href="mailto:ravmiecznik@gmail.com?subject=EMUBT"><img class="contact_link contact_link_left" src="resources/email2.png"></a>
-      <a title="Skype: ravmiecznik" href="skype:ravmiecznik@live.com?chat"><img class="contact_link contact_link_left" src="resources/skype.png"></a>
-      <a title="Digifant tool" href="https://www.youtube.com/channel/UCf1aKdZV842va2j9UnfraSQ?view_as=subscriber/"><img class="contact_link contact_link_left" src="resources/youtube.png"></a>
-      <a title="Digifant tool" href="https://www.facebook.com/tuningtool/"><img class="contact_link contact_link_left" src="resources/facebook.png"></a>
-      <a title="GIT" href="https://github.com/ravmiecznik/emub_bt_r/releases/latest"><img class="contact_link contact_link_left" src="resources/git-icon_1.png"></a>
-    </div>
-    
-    
-    <div class="main_grid bottom_border" id="main_grid">
-        <div class="cell text bottom_border" id="about">
-          
-          <div class="main_iframe">
-            <iframe src="https://www.youtube.com/embed/rUin6Hb9cz8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="main_iframe">
-            <iframe src="https://www.youtube.com/embed/xq7Y-FIqNp0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <h2>NEWS</h2>
-          <p>
-            <li>25.09.2022: V2.72.2 Released: improved emubt.exe comunication, immobilizer support</li>
-            <li>05.04.2021: <a href=tutorials.html#tutorials.html>TUTORIALS</a> added</li>
-            <li>14.02.2021: ALDL droid support implemented !!! <a href=#aldldroid>check here for details</a></li>
-          </p>
-          
-          <h1>ABOUT</h1>
-          <h2>
-            Below is short description of the board:
-          </h2>
-          <div class="square"> 
-            <!--<img src="resources/emubt.svg">-->
-            <img src="resources/emubt_color.png" style="width:15vw; float: left; margin: 15px;">
-          </div>
-          <p>
-            This board can replace old EEPROM chip permanently. It doesn't require any external power source.
-            It lets you emulate any Digifant 1 EEPROM binary image, it also can enable data feedback for all
-            non customized EERPOM images, anyway it works for most customized and tuned EERPOM images too but no 100% warranty for that.
-          </p>
-          <p>
-            <br><br><br><br>
-            It's big advantage is that it transfers all data over Bluetooth:
-            <ul>
-              <li>uploading and reading currently emulated EEPROM image</li>
-              <li>Digifant 1 data feedback</li>
-            </ul>
-          </p>
-          <p>
-            Because it uses Bluetooth and doesn't require external power source it can operate without PC connection to emulate the program.
-            User can upload any binary with some modifications for instance and disconnect PC at any time and the board still emulates the program even if you restart engine.
-            Uploaded image is stored in permanent memory of the board, in three different banks actually, and emulation starts whenever you turn ignition on.
-            It works just like regular EEPROM chip but you can update EEPROM image at any time using Bluetooth interface and additionally the board can enable Digifant data feedback.
-          </p>
-          
-          <h2>
-            Data feedback
-          </h2>
-          <p>
-            So the board lets you receive data from your ECU ! <a href=https://www.youtube.com/embed/b4Lb02Id1Gc>check this YOUTUBE video</a>
-            <br>
-            At the moment it fully supports TunerPro. User can connect the board to TunerPro and having appropriate adx files receive and decode data from ECU. I provide all the necessary adx, xdf files,
-            also some ready and tested Digifant 1 binaries with the board (go to <a href=#download>Download</a> section).
-          </p>
-          
-          <h2>
-            Data feedback benefits
-          </h2>
-          <p>
-            First of all user can get all raw sensors readings which allows to identify problems like faulty lambda sensor, knock sensor, temperature sensors etc.
-            As all Digifant 1 users know, searching for root cause of any problems related with badly running engine is problematic because there is no diagnostic interface for DF1 except poor blink codes.
-            Whith this board DF1 users life is easier.
-            <br>
-            Another important thing to mention is that user can read some ECU running conditions like if it is in WOT mode or if there was any Knock detonation detected, personally I used this feature as
-            a basis to tune my car. It is also possible to get currently calculated injection time, current timing advance etc. Check <a href="">adx</a> file for more details.
-            <br>
-            Another useful feature is hit data tracing with TunerPro. Having the board and all adx, xdf files provided with it user can monitor at which point of given map (FUEL, IGNITION etc)
-            some event occurred, like at which point Knock detonation was detected, then user can modify Ignition map to avoid the Knock, what mixture was at given FUEL map point (RPM vs MAP reading), then
-            user can modify FUEL map accordingly.
-            <br>
-            It is also possible to connect Wideband Sensor output to DF1 ECU ! so the user can monitor mixture in wide range and modify Fuel maps as required. So now you know at what RPM and Engine Load (MAP)
-            the fuel mixture is.
-          </p>
-          
-          <h2>
-            Emulation benefits
-          </h2>
-          <p>
-            I suppose this is quite obvious: old fashion EEPROM programmer is not needed anymore, which is quite expensive anyway.
-            The biggest benefit is that user can update, or reprogram as you prefer, emulated EEPROM image at any time by connecting PC to the board.
-            User can also use three different banks as a backup or alternative programs to be emulated.
-            
-            Opening ECU, removing EERPOM chip, reprogramming, and putting all back together is time consuming...
-          </p>
-          <h2>
-            Tuning
-          </h2>
-          <p>
-            With use of this board, TunerPro and provided xdf definition files for TunerPro you can edit and adapt your Digifant1 program for your needs.
-            <a href=#tuner_pro>TunerPro definition file (xdf)</a> contains information about most important maps and vectors found in Digifant1 program:
-            <ul>
-              <li>Ignition map</li>
-              <li>Fuel map</li>
-              <li>Rev limiter</li>
-            </ul>
-          </p>
-          <p>
-            and a lot more information:
-          </p>
-          
-            <div class="pictures_grid">
-              <img class="grid_picture"  src="resources/parameters1.JPG">
-              <img class="grid_picture"  src="resources/parameters2.JPG">
-              <img class="grid_picture"  src="resources/parameters3.JPG">
-              <img class="grid_picture" src="resources/carousel_slides/fuelve.jpg">
-              <img class="grid_picture" src="resources/ignition_map3d.JPG">
-            </div>
 
-          <h2 id=aldldroid>
-            ALDLdroid support
-          </h2>
-          <p>
-            Since 14.02.2021 EMUBT supports ALDL droid. ALDLdroid is Android app to display ECU data, check <a href=https://play.google.com/store/apps/details?id=com.sgiroux.aldldroid>here</a>
-            for details.
-          </p>
-          <p>
-            In order to to make it work download <a href=#exe>emubt.hex</a> file version V2.5.4_1402202 or higher. The second file needed is
-            <a href=#hex>adx</a> file for ALDLdroid. Once ALDLdroid has been installed on your mobile device put adx file in: Android/data/com.sgiroux.aldldroid/files/adx/
-          </p>
-          
-          
+  <div class="top_bar_container">
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#demos">Demos</a>
+      <a href="#ordering">Ordering</a>
+      <a href="#contact">Contact</a>
+      <a href="#download">Download</a>
+      <a href="tutorials.html#tutorials.html">HowTo</a>
+      <a href="tutorials.html#tryit">TryIt!</a>
+    </div>
+
+    <div class="top_bar_txt square" id="top_bar">
+      <h1 style="width: 100%; font-size: 2vw;">BLUETOOTH EEPROM EMULATOR FOR DIGIFANT 1 </h1>
+      <h2 style="width: 100%; font-size: 1.4vw; margin: 10px 15px 10px 6%;">Replace old EEPROM chip with this board !
+      </h2>
+      <h2 style="width: 100%; font-size: 1.4vw; margin: 10px 15px 10px 7%;">Enable data feedback for most of available
+        Digifant 1 chips</h2>
+      <h2 style="width: 100%; font-size: 1.4vw; margin: 10px 15px 10px 8%;">TunerPro support for data feedback and hit
+        tracing</h2>
+      <h2 style="width: 100%; font-size: 1.4vw; margin: 10px 15px 10px 9%;">Works in standalone mode without PC
+        connection</h2>
+    </div>
+    <div>
+      <img id="emubt_svg" src="resources/emubt.svg">
+    </div>
+  </div>
+  <div class="bottom_border"><br></div>
+  <div class=floating_links id="links">
+    <a title="messenger" href="https://m.me/tuningtool"><img class="contact_link contact_link_left"
+        src="resources/messenger.png"></a>
+    <a title="ravmiecznk@gmail.com" href="mailto:ravmiecznik@gmail.com?subject=EMUBT"><img
+        class="contact_link contact_link_left" src="resources/email2.png"></a>
+    <a title="Skype: ravmiecznik" href="skype:ravmiecznik@live.com?chat"><img class="contact_link contact_link_left"
+        src="resources/skype.png"></a>
+    <a title="Digifant tool" href="https://www.youtube.com/channel/UCf1aKdZV842va2j9UnfraSQ?view_as=subscriber/"><img
+        class="contact_link contact_link_left" src="resources/youtube.png"></a>
+    <a title="Digifant tool" href="https://www.facebook.com/tuningtool/"><img class="contact_link contact_link_left"
+        src="resources/facebook.png"></a>
+    <a title="GIT" href="https://github.com/ravmiecznik/emub_bt_r/releases/latest"><img
+        class="contact_link contact_link_left" src="resources/git-icon_1.png"></a>
+  </div>
+
+
+  <div class="main_grid bottom_border" id="main_grid">
+    <div class="cell text bottom_border" id="about">
+
+      <div class="main_iframe">
+        <iframe src="https://www.youtube.com/embed/rUin6Hb9cz8" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <div class="main_iframe">
+        <iframe src="https://www.youtube.com/embed/xq7Y-FIqNp0" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <h2>NEWS</h2>
+      <p>
+        <li>25.09.2022: V2.72.2 Released: improved emubt.exe comunication, immobilizer support</li>
+        <li>05.04.2021: <a href=tutorials.html#tutorials.html>TUTORIALS</a> added</li>
+        <li>14.02.2021: ALDL droid support implemented !!! <a href=#aldldroid>check here for details</a></li>
+      </p>
+
+      <h1>ABOUT</h1>
+      <h2>
+        Below is short description of the board:
+      </h2>
+      <div class="square">
+        <!--<img src="resources/emubt.svg">-->
+        <img src="resources/emubt_color.png" style="width:15vw; float: left; margin: 15px;">
+      </div>
+      <p>
+        This board can replace old EEPROM chip permanently. It doesn't require any external power source.
+        It lets you emulate any Digifant 1 EEPROM binary image, it also can enable data feedback for all
+        non customized EERPOM images, anyway it works for most customized and tuned EERPOM images too but no 100%
+        warranty for that.
+      </p>
+      <p>
+        <br><br><br><br>
+        It's big advantage is that it transfers all data over Bluetooth:
+      <ul>
+        <li>uploading and reading currently emulated EEPROM image</li>
+        <li>Digifant 1 data feedback</li>
+      </ul>
+      </p>
+      <p>
+        Because it uses Bluetooth and doesn't require external power source it can operate without PC connection to
+        emulate the program.
+        User can upload any binary with some modifications for instance and disconnect PC at any time and the board
+        still emulates the program even if you restart engine.
+        Uploaded image is stored in permanent memory of the board, in three different banks actually, and emulation
+        starts whenever you turn ignition on.
+        It works just like regular EEPROM chip but you can update EEPROM image at any time using Bluetooth interface and
+        additionally the board can enable Digifant data feedback.
+      </p>
+
+      <h2>
+        Data feedback
+      </h2>
+      <p>
+        So the board lets you receive data from your ECU ! <a href=https://www.youtube.com/embed/b4Lb02Id1Gc>check this
+          YOUTUBE video</a>
+        <br>
+        At the moment it fully supports TunerPro. User can connect the board to TunerPro and having appropriate adx
+        files receive and decode data from ECU. I provide all the necessary adx, xdf files,
+        also some ready and tested Digifant 1 binaries with the board (go to <a href=#download>Download</a> section).
+      </p>
+
+      <h2>
+        Data feedback benefits
+      </h2>
+      <p>
+        First of all user can get all raw sensors readings which allows to identify problems like faulty lambda sensor,
+        knock sensor, temperature sensors etc.
+        As all Digifant 1 users know, searching for root cause of any problems related with badly running engine is
+        problematic because there is no diagnostic interface for DF1 except poor blink codes.
+        Whith this board DF1 users life is easier.
+        <br>
+        Another important thing to mention is that user can read some ECU running conditions like if it is in WOT mode
+        or if there was any Knock detonation detected, personally I used this feature as
+        a basis to tune my car. It is also possible to get currently calculated injection time, current timing advance
+        etc. Check <a href="">adx</a> file for more details.
+        <br>
+        Another useful feature is hit data tracing with TunerPro. Having the board and all adx, xdf files provided with
+        it user can monitor at which point of given map (FUEL, IGNITION etc)
+        some event occurred, like at which point Knock detonation was detected, then user can modify Ignition map to
+        avoid the Knock, what mixture was at given FUEL map point (RPM vs MAP reading), then
+        user can modify FUEL map accordingly.
+        <br>
+        It is also possible to connect Wideband Sensor output to DF1 ECU ! so the user can monitor mixture in wide range
+        and modify Fuel maps as required. So now you know at what RPM and Engine Load (MAP)
+        the fuel mixture is.
+      </p>
+
+      <h2>
+        Emulation benefits
+      </h2>
+      <p>
+        I suppose this is quite obvious: old fashion EEPROM programmer is not needed anymore, which is quite expensive
+        anyway.
+        The biggest benefit is that user can update, or reprogram as you prefer, emulated EEPROM image at any time by
+        connecting PC to the board.
+        User can also use three different banks as a backup or alternative programs to be emulated.
+
+        Opening ECU, removing EERPOM chip, reprogramming, and putting all back together is time consuming...
+      </p>
+      <h2>
+        Tuning
+      </h2>
+      <p>
+        With use of this board, TunerPro and provided xdf definition files for TunerPro you can edit and adapt your
+        Digifant1 program for your needs.
+        <a href=#tuner_pro>TunerPro definition file (xdf)</a> contains information about most important maps and vectors
+        found in Digifant1 program:
+      <ul>
+        <li>Ignition map</li>
+        <li>Fuel map</li>
+        <li>Rev limiter</li>
+      </ul>
+      </p>
+      <p>
+        and a lot more information:
+      </p>
+
+      <div class="pictures_grid">
+        <img class="grid_picture" src="resources/parameters1.JPG">
+        <img class="grid_picture" src="resources/parameters2.JPG">
+        <img class="grid_picture" src="resources/parameters3.JPG">
+        <img class="grid_picture" src="resources/carousel_slides/fuelve.jpg">
+        <img class="grid_picture" src="resources/ignition_map3d.JPG">
+      </div>
+
+      <h2 id=aldldroid>
+        ALDLdroid support
+      </h2>
+      <p>
+        Since 14.02.2021 EMUBT supports ALDL droid. ALDLdroid is Android app to display ECU data, check <a
+          href=https://play.google.com/store/apps/details?id=com.sgiroux.aldldroid>here</a>
+        for details.
+      </p>
+      <p>
+        In order to to make it work download <a href=#exe>emubt.hex</a> file version V2.5.4_1402202 or higher. The
+        second file needed is
+        <a href=#hex>adx</a> file for ALDLdroid. Once ALDLdroid has been installed on your mobile device put adx file
+        in: Android/data/com.sgiroux.aldldroid/files/adx/
+      </p>
+
+
+    </div>
+
+    <div class="cell bottom_border" id="download">
+      <h1>DOWNLOAD</h1>
+      <div id="release">
+        <h3><a href="">RELSEASE NUMBER</a></h3>
+        <div id="pdf">
+          <h4></h4>
         </div>
-        
-        <div class="cell bottom_border" id="download">
-        <h1>DOWNLOAD</h1>
-          <div id="release">
-            <h3 ><a href="">RELSEASE NUMBER</a></h3>
-            <div id="pdf">
-              <h4></h4>
-            </div>
-            
-            <div id="bin">
-              <h4></h4>
-            </div>
-            
-            <div id="tuner_pro">
-              <h4></h4>
-            </div>
-            
-            <div id="exe">
-              <h4></h4>
-            </div>
-            
-            <div id="hex">
-              <h4></h4>
-            </div>
-            <div id="aldldroid_files">
-              <h4></h4>
-            </div>            
-            <div id="other">
-              <h4></h4>
-            </div>
-            
-            
-          </div>
-          <div id="tunerpro">
-            <h3 ><a href="https://www.tunerpro.net/">TunerPro home page</a></h3>
-          </div>
-          <div id="aldl_droid">
-            <h3 >
-              <a href="https://play.google.com/store/apps/details?id=com.sgiroux.aldldroid">ALDLdroid home page</a>
-            </h3>
-          </div>
+
+        <div id="bin">
+          <h4></h4>
         </div>
-        
-        
-        <div class="cell bottom_border" id="demos">
-          <h1>DEMOS</h1>
-            <div id="demos_grid">
-              <iframe class="demo_window" src="https://www.youtube.com/embed/b4Lb02Id1Gc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <iframe class="demo_window" src="https://www.youtube.com/embed/xq7Y-FIqNp0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <iframe class="demo_window" src="https://www.youtube.com/embed/VVEnGDDLKik" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <iframe class="demo_window" src="https://www.youtube.com/embed/rUin6Hb9cz8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              
-            </div>
+
+        <div id="tuner_pro">
+          <h4></h4>
         </div>
-        
+
+        <div id="exe">
+          <h4></h4>
+        </div>
+
+        <div id="hex">
+          <h4></h4>
+        </div>
+        <div id="aldldroid_files">
+          <h4></h4>
+        </div>
+        <div id="other">
+          <h4></h4>
+        </div>
+
+
+      </div>
+      <div id="tunerpro">
+        <h3><a href="https://www.tunerpro.net/">TunerPro home page</a></h3>
+      </div>
+      <div id="aldl_droid">
+        <h3>
+          <a href="https://play.google.com/store/apps/details?id=com.sgiroux.aldldroid">ALDLdroid home page</a>
+        </h3>
+      </div>
+    </div>
+
+
+    <div class="cell bottom_border" id="demos">
+      <h1>DEMOS</h1>
+      <div id="demos_grid">
+        <iframe class="demo_window" src="https://www.youtube.com/embed/b4Lb02Id1Gc" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <iframe class="demo_window" src="https://www.youtube.com/embed/xq7Y-FIqNp0" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <iframe class="demo_window" src="https://www.youtube.com/embed/VVEnGDDLKik" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <iframe class="demo_window" src="https://www.youtube.com/embed/rUin6Hb9cz8" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+
+      </div>
+    </div>
+
+    <div>
+      <div class="cell text bottom_border">
+        <h1 id="ordering">ORDERING</h1>
+        <p>
+          To order the board you can contact me with:
+        </p>
+        <p class="p_list">email</p>
+        <p class="p_list">facebook messenger</p>
+        <p class="p_list">skype</p>
+        <p>
+          The board price is 110EUR + 10EUR shipping worldwide.
+          Payment with PayPal, revolut or regular bank transfer
+        </p>
+      </div>
+
+      <div class="contact_view text cell bottom_border" id="contact">
+        <h1 style="font-size: 1.5vw;">CONTACT</h1>
+        <div class="contact_view" style="margin-left: 5%;"><a title="ravmiecznk@gmail.com"
+            href="mailto:ravmiecznik@gmail.com?subject=EMUBT" style="font-size: 20px;">ravmiecznk@gmail.com</a></div>
         <div>
-          <div class="cell text bottom_border">
-            <h1 id="ordering">ORDERING</h1>
-              <p>
-              To order the board you can contact me with:
-              </p>
-              <p class="p_list">email</p>
-              <p class="p_list">facebook messenger</p>
-              <p class="p_list">skype</p>
-              <p>
-              The board price is 110EUR + 10EUR shipping worldwide.
-              Payment with PayPal, revolut or regular bank transfer
-            </p>
-          </div>
-          
-          <div class="contact_view text cell bottom_border" id="contact">
-            <h1 style="font-size: 1.5vw;">CONTACT</h1>
-            <div class="contact_view" style="margin-left: 5%;"><a title="ravmiecznk@gmail.com" href="mailto:ravmiecznik@gmail.com?subject=EMUBT" style="font-size: 20px;">ravmiecznk@gmail.com</a></div>
-            <div>
-              <a title="messenger" href="https://m.me/tuningtool" ><img src="resources/messenger.png"></a>
-              <a title="ravmiecznk@gmail.com" href="mailto:ravmiecznik@gmail.com?subject=EMUBT"><img src="resources/email2.png"></a>
-              <a title="Skype: ravmiecznik" href="skype:ravmiecznik@live.com?chat"><img src="resources/skype.png"></a>
-            </div>
-          </div>
+          <a title="messenger" href="https://m.me/tuningtool"><img src="resources/messenger.png"></a>
+          <a title="ravmiecznk@gmail.com" href="mailto:ravmiecznik@gmail.com?subject=EMUBT"><img
+              src="resources/email2.png"></a>
+          <a title="Skype: ravmiecznik" href="skype:ravmiecznik@live.com?chat"><img src="resources/skype.png"></a>
         </div>
+      </div>
     </div>
-    <div class="footer">&copy 2020 Rafal Miecznik<a href="mailto:ravmiecznik@gmail.com?subject=EMUBT"> ravmiecznk@gmail.com</a></div>
-    <!--<iframe id="location" src="https://mylocation.org/" style="display: block";></iframe>-->
+  </div>
+  <div class="footer">&copy 2020 Rafal Miecznik<a href="mailto:ravmiecznik@gmail.com?subject=EMUBT">
+      ravmiecznk@gmail.com</a></div>
 
-  
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script language="JavaScript" type="text/javascript"  src="main.js"></script>
+<script language="JavaScript" type="text/javascript" src="main.js"></script>
+
 </html>
