@@ -151,7 +151,7 @@ function GetLatestReleaseInfo() {
         div_bin.appendChild(link);
         div_bin.getElementsByTagName('h4')[0].textContent = "Digifant tested EEPROMs:";
       }
-      else if(extension == 'exe' || extension == 'rar'){
+      else if(extension == 'exe' || extension == 'rar' || extension == 'zip'){
         div_exe.appendChild(link);
         div_exe.getElementsByTagName('h4')[0].textContent = "EmuBT app:";
       }
