@@ -112,8 +112,9 @@ function GetLatestReleaseInfo() {
       'xdf': "TunerPro map definition file",
       'pdf': "manual file",
       'hex': "EMUBT image file, use for reflashing",
-      'rar': "Compressed executable file",
-      'exe': "Executable appliaction"
+      'rar': "Compressed windows application",
+      'exe': "windows application",
+      'zip': "windows application",
     }
     
     download_section = document.getElementById("release");
