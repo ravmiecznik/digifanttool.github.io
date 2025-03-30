@@ -87,88 +87,78 @@
         <img src="resources/emubt_color.png" style="width:15vw; float: left; margin: 15px;">
       </div>
       <p>
-        This board can replace old EEPROM chip permanently. It doesn't require any external power source.
-        It lets you emulate any Digifant 1 EEPROM binary image, it also can enable data feedback for all
-        non customized EERPOM images, anyway it works for most customized and tuned EERPOM images too but no 100%
-        warranty for that.
+        This board can permanently replace the old EEPROM chip and does not require an external power source.
+        It allows you to emulate any Digifant 1 EEPROM binary image and enables data feedback for all
+        non-customized EEPROM images. While it works for most customized and tuned EEPROM images, there is no 100%
+        guarantee for compatibility.
       </p>
       <p>
         <br><br><br><br>
-        It's big advantage is that it transfers all data over Bluetooth:
+        Its major advantage is the ability to transfer all data over Bluetooth:
       <ul>
-        <li>uploading and reading currently emulated EEPROM image</li>
-        <li>Digifant 1 data feedback</li>
+        <li>Uploading and reading the currently emulated EEPROM image</li>
+        <li>Receiving Digifant 1 data feedback</li>
       </ul>
       </p>
       <p>
-        Because it uses Bluetooth and doesn't require external power source it can operate without PC connection to
-        emulate the program.
-        User can upload any binary with some modifications for instance and disconnect PC at any time and the board
-        still emulates the program even if you restart engine.
-        Uploaded image is stored in permanent memory of the board, in three different banks actually, and emulation
-        starts whenever you turn ignition on.
-        It works just like regular EEPROM chip but you can update EEPROM image at any time using Bluetooth interface and
-        additionally the board can enable Digifant data feedback.
+        Because it uses Bluetooth and does not require an external power source, it can operate without a PC connection
+        to emulate the program. Users can upload any binary (with modifications, if needed) and disconnect the PC at any time. 
+        The board will continue to emulate the program even after restarting the engine.
+        The uploaded image is stored in the board's permanent memory across three different banks, and emulation starts 
+        automatically whenever the ignition is turned on.
+        It functions just like a regular EEPROM chip, but with the added ability to update the EEPROM image at any time 
+        using the Bluetooth interface. Additionally, the board can enable Digifant data feedback.
       </p>
 
       <h2>
-        Data feedback
+        Data Feedback
       </h2>
       <p>
-        So the board lets you receive data from your ECU ! <a href=https://www.youtube.com/embed/b4Lb02Id1Gc>check this
-          YOUTUBE video</a>
+        This board allows you to receive data from your ECU! <a href="https://www.youtube.com/embed/b4Lb02Id1Gc">Check this
+          YouTube video</a> for more details.
         <br>
-        At the moment it fully supports TunerPro. User can connect the board to TunerPro and having appropriate adx
-        files receive and decode data from ECU. I provide all the necessary adx, xdf files,
-        also some ready and tested Digifant 1 binaries with the board (go to <a href=#download>Download</a> section).
+        Currently, it fully supports TunerPro. Users can connect the board to TunerPro and, with the appropriate ADX
+        files, receive and decode data from the ECU. All necessary ADX and XDF files, along with some ready and tested 
+        Digifant 1 binaries, are provided with the board (see the <a href="#download">Download</a> section).
       </p>
 
       <h2>
-        Data feedback benefits
+        Benefits of Data Feedback
       </h2>
       <p>
-        First of all user can get all raw sensors readings which allows to identify problems like faulty lambda sensor,
-        knock sensor, temperature sensors etc.
-        As all Digifant 1 users know, searching for root cause of any problems related with badly running engine is
-        problematic because there is no diagnostic interface for DF1 except poor blink codes.
-        Whith this board DF1 users life is easier.
+        First, users can access raw sensor readings, which help identify issues such as faulty lambda sensors, knock sensors, or temperature sensors. 
+        As many Digifant 1 users know, diagnosing engine issues can be challenging due to the lack of a proper diagnostic interface, apart from basic blink codes. 
+        This board simplifies troubleshooting for DF1 users.
         <br>
-        Another important thing to mention is that user can read some ECU running conditions like if it is in WOT mode
-        or if there was any Knock detonation detected, personally I used this feature as
-        a basis to tune my car. It is also possible to get currently calculated injection time, current timing advance
-        etc. Check <a href="">adx</a> file for more details.
+        Additionally, users can monitor ECU conditions, such as whether it is in WOT (Wide Open Throttle) mode or if knock detonation has been detected. 
+        Personally, I used this feature as a foundation for tuning my car. It is also possible to view the current injection time, timing advance, and more. 
+        Check the <a href="">ADX</a> file for further details.
         <br>
-        Another useful feature is hit data tracing with TunerPro. Having the board and all adx, xdf files provided with
-        it user can monitor at which point of given map (FUEL, IGNITION etc)
-        some event occurred, like at which point Knock detonation was detected, then user can modify Ignition map to
-        avoid the Knock, what mixture was at given FUEL map point (RPM vs MAP reading), then
-        user can modify FUEL map accordingly.
+        Another valuable feature is hit data tracing with TunerPro. With the board and the provided ADX and XDF files, users can track events on specific maps 
+        (e.g., FUEL, IGNITION). For instance, users can identify where knock detonation occurred, modify the ignition map to prevent it, or analyze the fuel mixture 
+        at specific points (RPM vs. MAP reading) and adjust the fuel map accordingly.
         <br>
-        It is also possible to connect Wideband Sensor output to DF1 ECU ! so the user can monitor mixture in wide range
-        and modify Fuel maps as required. So now you know at what RPM and Engine Load (MAP)
-        the fuel mixture is.
+        Furthermore, it is possible to connect a wideband sensor output to the DF1 ECU, enabling users to monitor the fuel mixture across a wide range and 
+        fine-tune fuel maps as needed. This allows users to determine the fuel mixture at specific RPM and engine load (MAP) conditions.
       </p>
 
       <h2>
-        Emulation benefits
+        Emulation Benefits
       </h2>
       <p>
-        I suppose this is quite obvious: old fashion EEPROM programmer is not needed anymore, which is quite expensive
-        anyway.
-        The biggest benefit is that user can update, or reprogram as you prefer, emulated EEPROM image at any time by
-        connecting PC to the board.
-        User can also use three different banks as a backup or alternative programs to be emulated.
-
-        Opening ECU, removing EERPOM chip, reprogramming, and putting all back together is time consuming...
+        The benefits of emulation are straightforward: there is no need for an old-fashioned EEPROM programmer, which can be quite expensive.
+        The most significant advantage is the ability to update or reprogram the emulated EEPROM image at any time by connecting a PC to the board.
+        Users can also utilize three different banks as backups or alternative programs for emulation.
+        <br>
+        Opening the ECU, removing the EEPROM chip, reprogramming it, and reassembling everything is time-consuming. This board eliminates that hassle.
       </p>
+
       <h2>
         Tuning
       </h2>
       <p>
-        With use of this board, TunerPro and provided xdf definition files for TunerPro you can edit and adapt your
-        Digifant1 program for your needs.
-        <a href=#tuner_pro>TunerPro definition file (xdf)</a> contains information about most important maps and vectors
-        found in Digifant1 program:
+        With this board, TunerPro, and the provided XDF definition files, users can edit and adapt their Digifant 1 program to suit their needs.
+        The <a href="#tuner_pro">TunerPro definition file (XDF)</a> includes information about the most critical maps and vectors in the Digifant 1 program:
       <ul>
         <li>Ignition map</li>
         <li>Fuel map</li>
@@ -176,32 +166,20 @@
       </ul>
       </p>
       <p>
-        and a lot more information:
+        Additionally, it provides a wealth of other information to assist with tuning.
       </p>
 
-      <div class="pictures_grid">
-        <img class="grid_picture" src="resources/parameters1.JPG">
-        <img class="grid_picture" src="resources/parameters2.JPG">
-        <img class="grid_picture" src="resources/parameters3.JPG">
-        <img class="grid_picture" src="resources/carousel_slides/fuelve.jpg">
-        <img class="grid_picture" src="resources/ignition_map3d.JPG">
-      </div>
-
-      <h2 id=aldldroid>
-        ALDLdroid support
+      <h2 id="aldldroid">
+        ALDLdroid Support
       </h2>
       <p>
-        Since 14.02.2021 EMUBT supports ALDL droid. ALDLdroid is Android app to display ECU data, check <a
-          href=https://play.google.com/store/apps/details?id=com.sgiroux.aldldroid>here</a>
-        for details.
+        Since 14.02.2021, EMUBT has supported ALDLdroid, an Android app for displaying ECU data. Check <a href="https://play.google.com/store/apps/details?id=com.sgiroux.aldldroid">here</a> for more details.
       </p>
       <p>
-        In order to to make it work download <a href=#exe>emubt.hex</a> file version V2.5.4_1402202 or higher. The
-        second file needed is
-        <a href=#hex>adx</a> file for ALDLdroid. Once ALDLdroid has been installed on your mobile device put adx file
-        in: Android/data/com.sgiroux.aldldroid/files/adx/
+        To enable this feature, download the <a href="#exe">emubt.hex</a> file version V2.5.4_1402202 or higher. 
+        You will also need the <a href="#hex">ADX</a> file for ALDLdroid. Once ALDLdroid is installed on your mobile device, place the ADX file in: 
+        <code>Android/data/com.sgiroux.aldldroid/files/adx/</code>.
       </p>
-
 
     </div>
 
@@ -277,7 +255,7 @@
         <p class="p_list">facebook messenger</p>
         <p class="p_list">skype</p>
         <p>
-          The board price is 190EUR + 10EUR shipping worldwide.
+          The board price is 150EUR + 10EUR shipping worldwide.
           Payment with PayPal, revolut or regular bank transfer
         </p>
       </div>
