@@ -22,11 +22,12 @@
     </div>
 
     <div class="top_bar_txt square" id="top_bar">
-      <h1 style="width: 100%; font-size: 2vw;">BLUETOOTH EEPROM EMULATOR FOR DIGIFANT 1</h1>
-      <h2 style="width: 100%; font-size: 1.4vw; margin: 10px 15px 10px 6%;">Replace your old EEPROM chip with this board!</h2>
-      <h2 style="width: 100%; font-size: 1.4vw; margin: 10px 15px 10px 7%;">Enable data feedback for most Digifant 1 chips.</h2>
-      <h2 style="width: 100%; font-size: 1.4vw; margin: 10px 15px 10px 8%;">Supports TunerPro for data feedback and hit tracing.</h2>
-      <h2 style="width: 100%; font-size: 1.4vw; margin: 10px 15px 10px 9%;">Operates in standalone mode without a PC connection.</h2>
+      <h1 style="width: 100%; font-size: 2vw;">Bluetooth EEPROM Emulator (Digifant 1) <br> Tuning & Testing Tool </h1>
+      <h2 style="width: 100%; font-size: 1.4vw; margin: 10px 15px 10px 2%;"">Experimental hardware for EEPROM emulation and ECU data analysis</h2>
+      <h2 style="width: 100%; font-size: 1.4vw; margin: 10px 15px 10px 3%;">Enables data feedback for most available Digifant 1 chips</h2>
+      <h2 style="width: 100%; font-size: 1.4vw; margin: 10px 15px 10px 4%;">TunerPro support for data feedback and hit tracing</h2>
+      <h2 style="width: 100%; font-size: 1.4vw; margin: 10px 15px 10px 5%;">Can operate in standalone mode without PC connection</h2>
+      <h2 style="width: 100%; font-size: 1.4vw; margin: 10px 15px 10px 6%;">Designed for testing, diagnostics and customization of Digifant 1 programs and maps</h2>
     </div>
     <div>
       <img id="emubt_svg" src="resources/emubt.svg">
@@ -245,13 +246,114 @@
       <p>
         Using TunerPro, you can modify your ECU program and upload it to the EMUBT board to improve your car's performance. All communication with the board, including reading data and uploading new files for emulation, is done via Bluetooth.
       </p>
-      <p>..TO BE UPDATED..</p>
 
-      <div>
-        <div class="cell text bottom_border"></div>
+      <h3>Adding Wideband O2 Sensor Readings</h3>
+
+      <p>
+        It is possible to add WBO2 readings to data feedback if you have a WBO2 sensor and controller that provides an analog output.
+        The analog output should be in the 0–5V range and preferably linear.<br><br>
+      
+        I am using this unit: <a href="https://wbo2.com/2y/2Y1-userman.htm">WBO2 2Y1</a>, which provides multiple outputs including 
+        <a href="https://wbo2.com/2y/2Y1-userman.htm#outputs">analog linear output (click for details)</a>.<br>
+      
+        The main challenge is synchronizing WBO2 readings with current engine operating conditions (MAP vs RPM). 
+        This can be achieved by connecting the WBO2 analog output to one of the analog inputs of the Digifant 1 ECU.<br>
+      </p>
+      
+      <p>
+        From my experience, the COPOT (CO potentiometer used to adjust carbon monoxide levels) wears out over time and becomes inaccurate. 
+        With the EMUBT board, it is possible to adjust fuel mixtures directly in TunerPro using fuel maps instead.
+      </p>
+      
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox">
+          <img src="resources/copot.png" class="center grid_picture" />
+        </label>
       </div>
-    </div>
-  </div>
+      
+      <p>
+        This makes it possible to replace the inaccurate potentiometer with TunerPro and EMUBT, while also freeing up an analog input. 
+        The COPOT input is also linear.<br>
+      
+        Note that the COPOT unit integrates the Intake Air Temperature sensor, which shares a ground pin with the CO potentiometer. 
+        The idea is to disconnect the potentiometer signal wire and connect the WBO2 analog output instead.<br>
+      
+        To do this, carefully identify PIN 1 in the COPOT connector and cut that wire. It is recommended to do this in a reversible way, 
+        so the original potentiometer can be reconnected if needed. Using a pair of male and female connectors is a good approach.<br>
+      
+        It is important to ensure a common ground for the WBO2 controller, sensor, and COPOT. Ideally, the WBO2 controller should be grounded 
+        close to the ECU grounding point. Due to chassis resistance, a small offset in readings may occur, but this can be corrected in TunerPro.
+      </p>
+      
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox">
+          <img src="resources/copot-pinout.png" class="center grid_picture" />
+        </label>
+      </div>
+
+      <p>
+        <p>
+          If you decide to cut the wire, a modification in the Digifant code is required so that the ECU uses a fixed value instead of reading 
+          the CO potentiometer resistance.
+        </p>
+        
+        <p>
+          You should do the following
+          <ul>
+            <li>Measure the current resistance of the COPOT (measurement between pins 1 and 3)</li>
+            <li>In EMUBT applicatation </li>
+            <ul>
+              <li>Select the EEPROM image you want to update</li>
+              <li>Click the COPOT patch button</li>
+              <li>Enter the resistance measured in the first step and click OK</li>
+              <li>Upload the EEPROM image to the emulator</li>
+            </ul>
+          </ul>
+        </p>
+        <div class="pictures_grid">
+          <div class="click-zoom">
+            <label>
+              <input type="checkbox">
+              <img class="grid_picture" src="resources/copot-patch.png" />
+            </label>
+          </div>
+          <div class="click-zoom">
+            <label>
+              <input type="checkbox">
+              <img class="grid_picture" src="resources/copot-patch-value.png" />
+            </label>
+          </div>
+        </div>
+      </p>
+      
+      <p>
+        Most WBO2 controllers also provide a digital output, typically available via a dedicated application. This can be used to compare 
+        analog and digital readings and calibrate the ADX file in TunerPro accordingly.<br>
+      
+        To do this, open: Acquisition → Edit Definition in TunerPro.
+      </p>
+      
+      <div class="pictures_grid">
+        <div class="click-zoom">
+          <label>
+            <input type="checkbox">
+            <img class="grid_picture" src="resources/wbo2-correction.png" />
+          </label>
+        </div>
+        <div class="click-zoom">
+          <label>
+            <input type="checkbox">
+            <img class="grid_picture" src="resources/wbo2-correction2.png" />
+          </label>
+        </div>
+      </div>
+      
+      <p>
+        If the WBO2 output is purely analog, you can adjust the final constant (e.g. value "9" in the equation shown above) 
+        to correct the reading.
+      </p>
 
   <div class="footer">
     &copy 2020 Rafal Miecznik<a href="mailto:ravmiecznik@gmail.com?subject=EMUBT">
